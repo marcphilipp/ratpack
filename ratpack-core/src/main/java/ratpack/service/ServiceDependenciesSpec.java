@@ -19,7 +19,6 @@ package ratpack.service;
 import ratpack.func.Predicate;
 
 import static ratpack.service.internal.ServicesGraph.isOfType;
-import static ratpack.service.internal.ServicesGraph.unpackIfLegacy;
 
 /**
  * Allows declaring which services depend on which services.
@@ -32,8 +31,6 @@ public interface ServiceDependenciesSpec {
 
   /**
    * Specifies that all services that match the {@code dependents} predicate are dependent on all services that match the {@code dependencies} predicate.
-   * <p>
-   * Note that legacy {@link ratpack.server.Service} will be wrapped in a {@link LegacyServiceAdapter} when supplied to the given predicates.
    *
    * @param dependents the criteria for dependent services
    * @param dependencies the criteria for services they depend on
@@ -44,9 +41,6 @@ public interface ServiceDependenciesSpec {
 
   /**
    * Specifies that all services that are of the given {@code dependentsType} that match the {@code dependents} predicate are dependent on all services that are of the {@code dependenciesType} that match the {@code dependencies} predicate.
-   * <p>
-   * Note that this method is {@link LegacyServiceAdapter} aware.
-   * Adapted services are unpacked, and their real type (i.e. {@link ratpack.server.Service} implementation type) is used.
    *
    * @param dependents the criteria for dependent services
    * @param dependencies the criteria for services they depend on
@@ -57,8 +51,8 @@ public interface ServiceDependenciesSpec {
    */
   default <T1, T2> ServiceDependenciesSpec dependsOn(Class<T1> dependentsType, Predicate<? super T1> dependents, Class<T2> dependenciesType, Predicate<? super T2> dependencies) throws Exception {
     return dependsOn(
-      s -> isOfType(s, dependentsType) && dependents.apply(dependentsType.cast(unpackIfLegacy(s))),
-      s -> isOfType(s, dependenciesType) && dependencies.apply(dependenciesType.cast(unpackIfLegacy(s)))
+      s -> isOfType(s, dependentsType) && dependents.apply(dependentsType.cast(s)),
+      s -> isOfType(s, dependenciesType) && dependencies.apply(dependenciesType.cast(s))
     );
   }
 
@@ -67,9 +61,6 @@ public interface ServiceDependenciesSpec {
    * <p>
    * All services that are type compatible with the {@code dependents} type,
    * will be considered dependents of all services that are type compatible with the {@code dependencies} type.
-   * <p>
-   * Note that this method is {@link LegacyServiceAdapter} aware.
-   * Adapted services are unpacked, and their real type (i.e. {@link ratpack.server.Service} implementation type) is used.
    * <p>
    * Use of this method is equivalent to annotating {@code dependents} with {@link DependsOn} with a value of {@code dependencies}.
    * It can be useful in situations however where you are unable to modify the {@code dependents} class.

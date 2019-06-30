@@ -22,6 +22,7 @@ import io.netty.buffer.Unpooled;
 import io.netty.util.AsciiString;
 import ratpack.exec.Operation;
 import ratpack.exec.Promise;
+import ratpack.service.StopEvent;
 import ratpack.session.SessionStore;
 
 import java.util.concurrent.atomic.AtomicLong;
@@ -71,7 +72,7 @@ public class LocalMemorySessionStore implements SessionStore {
   }
 
   @Override
-  public void onStop(@SuppressWarnings("deprecation") ratpack.server.StopEvent event) throws Exception {
+  public void onStop(StopEvent event) throws Exception {
     cache.invalidateAll();
   }
 

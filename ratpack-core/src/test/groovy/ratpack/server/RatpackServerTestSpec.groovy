@@ -20,6 +20,9 @@ import ratpack.func.Action
 import ratpack.groovy.test.embed.GroovyEmbeddedApp
 import ratpack.handling.Handler
 import ratpack.http.client.RequestSpec
+import ratpack.service.Service
+import ratpack.service.StartEvent
+import ratpack.service.StopEvent
 import ratpack.test.ServerBackedApplicationUnderTest
 import ratpack.test.embed.EmbeddedApp
 import ratpack.test.http.TestHttpClient

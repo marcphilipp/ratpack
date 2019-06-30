@@ -21,9 +21,6 @@ import org.reactivestreams.Publisher;
 import ratpack.exec.Promise;
 import ratpack.func.Action;
 import ratpack.http.client.internal.DefaultHttpClient;
-import ratpack.exec.registry.Registry;
-import ratpack.server.ServerConfig;
-import ratpack.func.util.Exceptions;
 
 import java.net.URI;
 import java.time.Duration;
@@ -216,29 +213,5 @@ public interface HttpClient extends AutoCloseable {
    * @see StreamedResponse
    */
   Promise<StreamedResponse> requestStream(URI uri, final Action<? super RequestSpec> requestConfigurer);
-
-  /**
-   * @deprecated since 1.4, use {@link #of(Action)}
-   */
-  @Deprecated
-  static HttpClient httpClient(ServerConfig serverConfig, Registry registry) {
-    return Exceptions.uncheck(() -> HttpClient.of(s -> s
-      .poolSize(0)
-      .byteBufAllocator(registry.get(ByteBufAllocator.class))
-      .maxContentLength(serverConfig.getMaxContentLength())
-    ));
-  }
-
-  /**
-   * @deprecated since 1.4, use {@link #of(Action)}
-   */
-  @Deprecated
-  static HttpClient httpClient(ByteBufAllocator byteBufAllocator, int maxContentLengthBytes) {
-    return Exceptions.uncheck(() -> HttpClient.of(s -> s
-      .poolSize(0)
-      .byteBufAllocator(byteBufAllocator)
-      .maxContentLength(maxContentLengthBytes)
-    ));
-  }
 
 }

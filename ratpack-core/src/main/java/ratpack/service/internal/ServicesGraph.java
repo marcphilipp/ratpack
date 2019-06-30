@@ -53,7 +53,6 @@ public class ServicesGraph {
   public ServicesGraph(Registry registry) throws Exception {
     this.nodes = ImmutableList.<Node>builder()
       .addAll(Iterables.transform(registry.getAll(Service.class), Node::new))
-      .addAll(adaptLegacy(registry))
       .build();
     this.toStartCount.set(nodes.size());
     this.toStopCount.set(nodes.size());
@@ -62,32 +61,19 @@ public class ServicesGraph {
     defineDependencies(registry);
   }
 
-  private Iterable<Node> adaptLegacy(Registry registry) {
-    @SuppressWarnings("deprecation") Class<ratpack.server.Service> type = ratpack.server.Service.class;
-    return Iterables.transform(registry.getAll(type), s -> new Node(new DefaultLegacyServiceAdapter(s)));
-  }
-
   private void defineDependencies(Registry registry) throws Exception {
     SpecBacking specBacking = new SpecBacking();
     for (ServiceDependencies dependencies : registry.getAll(ServiceDependencies.class)) {
       dependencies.define(specBacking);
     }
-    List<Node> legacyNodes = Lists.newArrayList();
     for (Node node : nodes) {
-      if (node.isLegacy()) {
-        for (Node legacyNode : legacyNodes) {
-          node.addDependency(legacyNode);
-          legacyNode.addDependent(node);
-        }
-        legacyNodes.add(node);
-      }
       DependsOn dependsOn = node.getDependsOn();
       if (dependsOn != null) {
         specBacking.dependsOn(
           s -> node.getImplClass().isInstance(s),
           s -> {
             for (Class<?> dependencyType : dependsOn.value()) {
-              if (dependencyType.isInstance(unpackIfLegacy(s))) {
+              if (dependencyType.isInstance(s)) {
                 return true;
               }
             }
@@ -246,11 +232,7 @@ public class ServicesGraph {
     }
 
     private Class<?> getImplClass() {
-      return isLegacy() ? ((DefaultLegacyServiceAdapter) service).getAdapted().getClass() : service.getClass();
-    }
-
-    private boolean isLegacy() {
-      return service instanceof DefaultLegacyServiceAdapter;
+      return service.getClass();
     }
 
     public boolean notStarted() {
@@ -321,23 +303,8 @@ public class ServicesGraph {
     }
   }
 
-  @SuppressWarnings("deprecation")
   public static boolean isOfType(Service service, Class<?> type) {
-    if (service instanceof LegacyServiceAdapter) {
-      ratpack.server.Service legacyService = ((LegacyServiceAdapter) service).getAdapted();
-      return type.isInstance(legacyService);
-    } else {
-      return type.isInstance(service);
-    }
-  }
-
-  @SuppressWarnings("deprecation")
-  public static Object unpackIfLegacy(Service service) {
-    if (service instanceof LegacyServiceAdapter) {
-      return ((LegacyServiceAdapter) service).getAdapted();
-    } else {
-      return service;
-    }
+    return type.isInstance(service);
   }
 
 }

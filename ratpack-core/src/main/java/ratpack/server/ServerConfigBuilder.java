@@ -30,7 +30,6 @@ import ratpack.func.Function;
 import ratpack.impose.ServerConfigImposition;
 import ratpack.func.util.Types;
 
-import javax.net.ssl.SSLContext;
 import java.io.File;
 import java.lang.reflect.Type;
 import java.net.InetAddress;
@@ -270,28 +269,6 @@ public interface ServerConfigBuilder extends ConfigDataBuilder {
    * @see ServerConfig#getWriteSpinCount()
    */
   ServerConfigBuilder writeSpinCount(int writeSpinCount);
-
-  /**
-   * The SSL context to use if the application serves content over HTTPS.
-   *
-   * @param sslContext the SSL context
-   * @return {@code this}
-   * @see ratpack.ssl.SSLContexts
-   * @see ServerConfig#getSslContext()
-   * @deprecated since 1.5, replaced by {@link #ssl(SslContext)}
-   */
-  @Deprecated
-  ServerConfigBuilder ssl(SSLContext sslContext);
-
-  /**
-   * The server needs client SSL authentication.
-   *
-   * @param requireClientSslAuth whether or not server needs client SSL authentication
-   * @return {@code this}
-   * @deprecated since 1.5, prefer {@link #ssl(SslContext)}
-   */
-  @Deprecated
-  ServerConfigBuilder requireClientSslAuth(boolean requireClientSslAuth);
 
   /**
    * The SSL context to use if the application serves content over HTTPS.

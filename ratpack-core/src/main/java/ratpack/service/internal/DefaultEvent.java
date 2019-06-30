@@ -20,8 +20,7 @@ import ratpack.exec.registry.Registry;
 import ratpack.service.StartEvent;
 import ratpack.service.StopEvent;
 
-@SuppressWarnings("deprecation")
-public class DefaultEvent implements StartEvent, StopEvent, ratpack.server.StartEvent, ratpack.server.StopEvent {
+public class DefaultEvent implements StartEvent, StopEvent {
 
   private final Registry registry;
   private final boolean reload;

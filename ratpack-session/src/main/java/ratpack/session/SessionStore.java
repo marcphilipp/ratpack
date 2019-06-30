@@ -48,6 +48,8 @@ import ratpack.exec.Promise;
  * import ratpack.exec.Blocking;
  * import ratpack.guice.ConfigurableModule;
  * import ratpack.guice.Guice;
+ * import ratpack.service.StartEvent;
+ * import ratpack.service.StopEvent;
  * import ratpack.session.Session;
  * import ratpack.session.SessionModule;
  * import ratpack.session.SessionStore;
@@ -74,14 +76,14 @@ import ratpack.exec.Promise;
  *     }
  *
  *     {@literal @}Override
- *     public void onStart({@literal @}SuppressWarnings("deprecation") ratpack.server.StartEvent event) throws Exception {
+ *     public void onStart(StartEvent event) throws Exception {
  *       Blocking.op(() -> {
  *         assert dir.mkdirs() || dir.exists();
  *       }).then();
  *     }
  *
  *     {@literal @}Override
- *     public void onStop({@literal @}SuppressWarnings("deprecation") ratpack.server.StopEvent event) throws Exception {
+ *     public void onStop(StopEvent event) throws Exception {
  *       Blocking.op(() -> {
  *         Arrays.asList(dir.listFiles()).forEach(File::delete);
  *         dir.delete();
@@ -170,7 +172,7 @@ import ratpack.exec.Promise;
  * @see SessionModule
  */
 @SuppressWarnings("deprecation")
-public interface SessionStore extends ratpack.server.Service {
+public interface SessionStore extends ratpack.service.Service {
 
   /**
    * Writes the session data for the given id.

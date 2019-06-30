@@ -188,18 +188,6 @@ public class DefaultServerConfigBuilder implements ServerConfigBuilder {
   }
 
   @Override
-  @SuppressWarnings("deprecation")
-  public ServerConfigBuilder ssl(SSLContext sslContext) {
-    return addToServer(n -> n.putPOJO("jdkSsl", sslContext));
-  }
-
-  @Override
-  @SuppressWarnings("deprecation")
-  public ServerConfigBuilder requireClientSslAuth(boolean requireClientSslAuth) {
-    return addToServer(n -> n.put("requireClientSslAuth", requireClientSslAuth));
-  }
-
-  @Override
   public ServerConfigBuilder ssl(SslContext sslContext) {
     return addToServer(n -> n.putPOJO("ssl", sslContext));
   }

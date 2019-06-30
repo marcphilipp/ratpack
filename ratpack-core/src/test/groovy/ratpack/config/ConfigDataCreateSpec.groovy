@@ -23,9 +23,9 @@ import org.junit.Rule
 import org.junit.rules.TemporaryFolder
 import ratpack.func.Action
 import ratpack.server.ServerConfig
-import ratpack.server.Service
-import ratpack.server.StartEvent
 import ratpack.server.internal.ServerConfigData
+import ratpack.service.Service
+import ratpack.service.StartEvent
 import ratpack.test.internal.RatpackGroovyDslSpec
 import spock.util.concurrent.PollingConditions
 

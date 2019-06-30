@@ -18,14 +18,12 @@ package ratpack.http.client.internal;
 
 import io.netty.handler.ssl.SslContext;
 import ratpack.func.Action;
-import ratpack.func.Factory;
 import ratpack.func.Function;
 import ratpack.http.HttpMethod;
 import ratpack.http.MutableHeaders;
 import ratpack.http.client.ReceivedResponse;
 import ratpack.http.client.RequestSpec;
 
-import javax.net.ssl.SSLContext;
 import java.net.URI;
 import java.time.Duration;
 
@@ -59,22 +57,8 @@ public class DelegatingRequestSpec implements RequestSpec {
   }
 
   @Override
-  @SuppressWarnings("deprecation")
-  public RequestSpec sslContext(SSLContext sslContext) {
-    delegate.sslContext(sslContext);
-    return this;
-  }
-
-  @Override
   public SslContext getSslContext() {
     return delegate.getSslContext();
-  }
-
-  @Override
-  @SuppressWarnings("deprecation")
-  public RequestSpec sslContext(Factory<SSLContext> factory) throws Exception {
-    delegate.sslContext(factory);
-    return this;
   }
 
   @Override
