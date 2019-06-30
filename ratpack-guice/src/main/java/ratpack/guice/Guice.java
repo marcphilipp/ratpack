@@ -33,14 +33,14 @@ import ratpack.handling.Chain;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 import ratpack.impose.Impositions;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 import ratpack.server.ServerConfig;
 
 import java.util.List;
 import java.util.Optional;
 
 import static com.google.inject.Guice.createInjector;
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 /**
  * Static utility methods for creating Google Guice based Ratpack infrastructure.

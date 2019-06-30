@@ -26,8 +26,8 @@ import ratpack.config.ConfigObject;
 import ratpack.func.Action;
 import ratpack.func.Factory;
 import ratpack.server.ServerConfig;
-import ratpack.util.Exceptions;
-import ratpack.util.Types;
+import ratpack.func.util.Exceptions;
+import ratpack.func.util.Types;
 
 import javax.inject.Singleton;
 import java.lang.reflect.Constructor;

@@ -39,7 +39,6 @@ include \
     "ratpack-lazybones",
     "ratpack-hikari",
     "ratpack-newrelic",
-    "ratpack-pac4j",
     "ratpack-hystrix",
     "ratpack-spring-boot",
     "ratpack-spring-boot-starter",
@@ -47,7 +46,7 @@ include \
     "ratpack-retrofit2",
     "ratpack-jdbc-tx",
     "ratpack-consul",
-    "ratpack-base",
+    "ratpack-func",
     "ratpack-exec",
     "ratpack-rocker",
     "ratpack-gson"

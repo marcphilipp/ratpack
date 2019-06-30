@@ -23,7 +23,7 @@ import ratpack.func.BiAction;
 import ratpack.func.BiFunction;
 import ratpack.func.Block;
 import ratpack.func.Function;
-import ratpack.util.Exceptions;
+import ratpack.func.util.Exceptions;
 
 import java.time.Duration;
 

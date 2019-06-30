@@ -24,10 +24,10 @@ import ratpack.reactor.internal.BlockingExecutorBackedScheduler;
 import ratpack.reactor.internal.DefaultSchedulers;
 import ratpack.reactor.internal.ErrorHandler;
 import ratpack.reactor.internal.ExecControllerBackedScheduler;
-import ratpack.registry.RegistrySpec;
-import ratpack.stream.Streams;
-import ratpack.stream.TransformablePublisher;
-import ratpack.util.Exceptions;
+import ratpack.exec.registry.RegistrySpec;
+import ratpack.exec.stream.Streams;
+import ratpack.exec.stream.TransformablePublisher;
+import ratpack.func.util.Exceptions;
 import reactor.core.CoreSubscriber;
 import reactor.core.Scannable;
 import reactor.core.publisher.Flux;
@@ -374,7 +374,7 @@ public abstract class ReactorRatpack {
    * <p>
    * <pre class="java">{@code
    * import ratpack.reactor.ReactorRatpack;
-   * import ratpack.stream.Streams;
+   * import ratpack.exec.stream.Streams;
    * import ratpack.test.exec.ExecHarness;
    * import reactor.core.publisher.Flux;
    * import java.util.List;

@@ -25,7 +25,7 @@ import ratpack.handling.Context;
 import ratpack.handling.Handler;
 import ratpack.http.Request;
 import ratpack.http.Response;
-import ratpack.registry.RegistrySpec;
+import ratpack.exec.registry.RegistrySpec;
 import ratpack.server.ServerConfig;
 import ratpack.server.ServerConfigBuilder;
 import ratpack.test.handling.internal.DefaultRequestFixture;

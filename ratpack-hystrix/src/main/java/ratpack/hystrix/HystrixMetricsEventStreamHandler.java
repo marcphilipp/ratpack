@@ -24,8 +24,8 @@ import ratpack.handling.Handler;
 import ratpack.hystrix.internal.*;
 
 import static ratpack.sse.ServerSentEvents.serverSentEvents;
-import static ratpack.stream.Streams.fanOut;
-import static ratpack.stream.Streams.merge;
+import static ratpack.exec.stream.Streams.fanOut;
+import static ratpack.exec.stream.Streams.merge;
 
 /**
  * A Handler that streams Hystrix metrics in text/event-stream format.

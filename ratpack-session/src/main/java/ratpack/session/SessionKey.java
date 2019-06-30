@@ -16,9 +16,9 @@
 
 package ratpack.session;
 
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 import ratpack.session.internal.DefaultSessionKey;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import java.util.Objects;
 

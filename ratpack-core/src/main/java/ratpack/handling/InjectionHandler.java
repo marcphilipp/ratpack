@@ -18,7 +18,7 @@ package ratpack.handling;
 
 import com.google.common.reflect.TypeToken;
 import ratpack.handling.internal.Extractions;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -26,7 +26,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 /**
  * A super class that removes the boiler plate of retrieving objects from the context registry by injecting them based on a method signature.
@@ -85,7 +85,7 @@ import static ratpack.util.Exceptions.uncheck;
  * }
  * }</pre>
  * <p>
- * If the parameters cannot be satisfied, a {@link ratpack.registry.NotInRegistryException} will be thrown.
+ * If the parameters cannot be satisfied, a {@link ratpack.exec.registry.NotInRegistryException} will be thrown.
  * The {@link java.util.Optional} type can be used to inject registry entries that may not exist.
  * <pre class="java">{@code
  * import ratpack.handling.Context;

@@ -36,10 +36,10 @@ import ratpack.http.client.RequestSpec;
 import ratpack.http.client.StreamedResponse;
 import ratpack.http.internal.DefaultStatus;
 import ratpack.http.internal.NettyHeadersBackedHeaders;
-import ratpack.stream.TransformablePublisher;
-import ratpack.stream.internal.BufferedWriteStream;
-import ratpack.stream.internal.BufferingPublisher;
-import ratpack.util.Exceptions;
+import ratpack.exec.stream.TransformablePublisher;
+import ratpack.exec.stream.internal.BufferedWriteStream;
+import ratpack.exec.stream.internal.BufferingPublisher;
+import ratpack.func.util.Exceptions;
 
 import java.net.URI;
 import java.util.ArrayList;

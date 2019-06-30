@@ -24,7 +24,7 @@ import org.reactivestreams.Publisher;
 import ratpack.func.Function;
 import ratpack.handling.Context;
 import ratpack.server.ServerConfig;
-import ratpack.stream.Streams;
+import ratpack.exec.stream.Streams;
 import ratpack.websocket.internal.DefaultWebSocketConnector;
 import ratpack.websocket.internal.WebSocketEngine;
 import ratpack.websocket.internal.WebsocketBroadcastSubscriber;
@@ -42,7 +42,7 @@ import java.nio.CharBuffer;
  *
  * import java.time.Duration;
  *
- * import static ratpack.stream.Streams.periodically;
+ * import static ratpack.exec.stream.Streams.periodically;
  *
  * chain.get("whatever", context -> {
  *   Publisher<String> stream = periodically(context, Duration.ofSeconds(1), i ->

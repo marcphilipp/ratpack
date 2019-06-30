@@ -20,7 +20,7 @@ import com.google.common.reflect.TypeToken;
 import ratpack.exec.Throttle;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import java.util.Collections;
 import java.util.Optional;

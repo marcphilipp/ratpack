@@ -25,9 +25,9 @@ import ratpack.exec.Promise;
 import ratpack.exec.util.ParallelBatch;
 import ratpack.func.Action;
 import ratpack.func.BiAction;
-import ratpack.stream.TransformablePublisher;
-import ratpack.stream.internal.BufferingPublisher;
-import ratpack.util.Types;
+import ratpack.exec.stream.TransformablePublisher;
+import ratpack.exec.stream.internal.BufferingPublisher;
+import ratpack.func.util.Types;
 
 import java.util.Collections;
 import java.util.Iterator;

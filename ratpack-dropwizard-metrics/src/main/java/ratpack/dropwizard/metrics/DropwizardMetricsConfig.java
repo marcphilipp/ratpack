@@ -22,7 +22,7 @@ import java.time.Duration;
 import java.util.Map;
 import java.util.Optional;
 
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 /**
  * The configuration object for {@link DropwizardMetricsModule}.

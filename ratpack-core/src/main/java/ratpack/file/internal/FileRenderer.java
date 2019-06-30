@@ -29,8 +29,8 @@ import ratpack.http.Response;
 import ratpack.http.internal.HttpHeaderConstants;
 import ratpack.render.Renderer;
 import ratpack.render.RendererSupport;
-import ratpack.util.Exceptions;
-import ratpack.util.Types;
+import ratpack.func.util.Exceptions;
+import ratpack.func.util.Types;
 
 import java.nio.file.Files;
 import java.nio.file.Path;

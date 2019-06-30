@@ -23,7 +23,7 @@ import ratpack.func.Function;
 import ratpack.handling.Chain;
 import ratpack.handling.Handler;
 import ratpack.handling.Handlers;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 import ratpack.server.RatpackServer;
 import ratpack.server.RatpackServerSpec;
 import ratpack.server.ServerConfig;
@@ -34,7 +34,7 @@ import ratpack.test.embed.internal.EmbeddedAppSupport;
 
 import java.net.URI;
 
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 /**
  * An application created and used at runtime, useful for functionally testing subsets of functionality.

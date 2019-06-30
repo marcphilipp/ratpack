@@ -19,12 +19,12 @@ package ratpack.rx;
 import org.reactivestreams.Publisher;
 import ratpack.exec.*;
 import ratpack.func.Action;
-import ratpack.registry.RegistrySpec;
+import ratpack.exec.registry.RegistrySpec;
 import ratpack.rx.internal.DefaultSchedulers;
 import ratpack.rx.internal.ExecControllerBackedScheduler;
-import ratpack.stream.Streams;
-import ratpack.stream.TransformablePublisher;
-import ratpack.util.Exceptions;
+import ratpack.exec.stream.Streams;
+import ratpack.exec.stream.TransformablePublisher;
+import ratpack.func.util.Exceptions;
 import rx.Observable;
 import rx.RxReactiveStreams;
 import rx.Scheduler;
@@ -501,7 +501,7 @@ public abstract class RxRatpack {
    *
    * <pre class="java">{@code
    * import ratpack.rx.RxRatpack;
-   * import ratpack.stream.Streams;
+   * import ratpack.exec.stream.Streams;
    * import ratpack.test.exec.ExecHarness;
    * import rx.Observable;
    * import java.util.List;
@@ -543,7 +543,7 @@ public abstract class RxRatpack {
    *
    * <pre class="java">{@code
    * import ratpack.rx.RxRatpack;
-   * import ratpack.stream.Streams;
+   * import ratpack.exec.stream.Streams;
    * import ratpack.test.exec.ExecHarness;
    * import rx.Observable;
    * import java.util.List;

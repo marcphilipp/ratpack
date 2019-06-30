@@ -19,7 +19,7 @@ package ratpack.groovy.handling;
 import ratpack.func.Action;
 import ratpack.handling.Chain;
 import ratpack.handling.Handler;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 import ratpack.server.ServerConfig;
 
 /**

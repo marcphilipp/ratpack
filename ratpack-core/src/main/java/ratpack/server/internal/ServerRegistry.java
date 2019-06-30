@@ -45,8 +45,8 @@ import ratpack.http.client.HttpClient;
 import ratpack.impose.Impositions;
 import ratpack.jackson.internal.JsonParser;
 import ratpack.jackson.internal.JsonRenderer;
-import ratpack.registry.Registry;
-import ratpack.registry.RegistryBuilder;
+import ratpack.exec.registry.Registry;
+import ratpack.exec.registry.RegistryBuilder;
 import ratpack.render.internal.*;
 import ratpack.server.*;
 import ratpack.sse.ServerSentEventStreamClient;
@@ -54,9 +54,9 @@ import ratpack.sse.ServerSentEventStreamClient;
 import java.time.Clock;
 import java.util.Optional;
 
-import static ratpack.util.Exceptions.uncheck;
-import static ratpack.util.internal.ProtocolUtil.HTTPS_SCHEME;
-import static ratpack.util.internal.ProtocolUtil.HTTP_SCHEME;
+import static ratpack.func.util.Exceptions.uncheck;
+import static ratpack.func.util.internal.ProtocolUtil.HTTPS_SCHEME;
+import static ratpack.func.util.internal.ProtocolUtil.HTTP_SCHEME;
 
 public abstract class ServerRegistry {
   public static Registry serverRegistry(RatpackServer ratpackServer, Impositions impositions, ExecControllerInternal execController, ServerConfig serverConfig, Function<? super Registry, ? extends Registry> userRegistryFactory) {

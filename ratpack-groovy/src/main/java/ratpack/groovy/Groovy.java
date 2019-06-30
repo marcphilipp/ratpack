@@ -22,7 +22,7 @@ import groovy.lang.DelegatesTo;
 import groovy.lang.GroovySystem;
 import groovy.xml.MarkupBuilder;
 import io.netty.util.CharsetUtil;
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 import ratpack.file.FileSystemBinding;
 import ratpack.func.Action;
 import ratpack.func.Function;
@@ -46,11 +46,11 @@ import ratpack.handling.Handler;
 import ratpack.handling.Handlers;
 import ratpack.handling.internal.ChainBuilders;
 import ratpack.http.internal.HttpHeaderConstants;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 import ratpack.server.*;
 import ratpack.server.internal.BaseDirFinder;
 import ratpack.server.internal.FileBackedReloadInformant;
-import ratpack.util.internal.Paths2;
+import ratpack.func.util.internal.Paths2;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -60,7 +60,7 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.Optional;
 
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 /**
  * Static methods for specialized Groovy integration.

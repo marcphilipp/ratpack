@@ -24,7 +24,7 @@ import java.util.Collection;
 /**
  * A message broadcaster for sending Hystrix thread pool metrics to its subscribers.
  */
-public class HystrixThreadPoolMetricsBroadcaster extends ratpack.stream.internal.MulticastPublisher<Collection<HystrixThreadPoolMetrics>> {
+public class HystrixThreadPoolMetricsBroadcaster extends ratpack.exec.stream.internal.MulticastPublisher<Collection<HystrixThreadPoolMetrics>> {
 
   @Inject
   public HystrixThreadPoolMetricsBroadcaster(HystrixThreadPoolMetricsPeriodicPublisher publisher) {

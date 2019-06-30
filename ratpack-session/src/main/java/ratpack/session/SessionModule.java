@@ -31,7 +31,7 @@ import ratpack.guice.RequestScoped;
 import ratpack.http.Request;
 import ratpack.http.Response;
 import ratpack.session.internal.*;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import javax.inject.Named;
 import java.io.Serializable;

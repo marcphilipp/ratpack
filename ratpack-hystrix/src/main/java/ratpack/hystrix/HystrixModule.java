@@ -28,7 +28,7 @@ import ratpack.hystrix.internal.*;
  * To use it one has to register the module.
  * <p>
  * By default the module registers a {@link com.netflix.hystrix.strategy.concurrency.HystrixConcurrencyStrategy}
- * with Hystrix that provides a {@link ratpack.registry.Registry} backed strategy for caching {@link com.netflix.hystrix.strategy.concurrency.HystrixRequestVariable}
+ * with Hystrix that provides a {@link ratpack.exec.registry.Registry} backed strategy for caching {@link com.netflix.hystrix.strategy.concurrency.HystrixRequestVariable}
  * during a {@link ratpack.http.Request}.  This means that Hystrix will use Ratpack's Request Registry for request caching, request collapsing and request log.
  * <p>
  * To enable the streaming of Hystrix metrics in text/event-stream format use the {@link #sse()} configuration option.

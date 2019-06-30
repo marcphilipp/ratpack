@@ -17,7 +17,7 @@
 package ratpack.reload.internal;
 
 import ratpack.func.Factory;
-import ratpack.util.internal.Paths2;
+import ratpack.func.util.internal.Paths2;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -28,7 +28,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 public class ReloadableFileBackedFactory<T> implements Factory<T> {
 

@@ -22,7 +22,7 @@ import ratpack.http.client.HttpClient;
 import ratpack.http.client.RequestSpec;
 import ratpack.sse.Event;
 import ratpack.sse.ServerSentEventStreamClient;
-import ratpack.stream.TransformablePublisher;
+import ratpack.exec.stream.TransformablePublisher;
 
 import java.net.URI;
 

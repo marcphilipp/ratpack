@@ -17,9 +17,9 @@
 package ratpack.file;
 
 import com.google.common.reflect.TypeToken;
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 import ratpack.file.internal.DefaultFileSystemBinding;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

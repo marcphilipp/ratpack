@@ -20,8 +20,8 @@ import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 import com.google.common.reflect.TypeToken;
 import ratpack.handling.Context;
-import ratpack.util.Types;
-import ratpack.util.internal.InternalRatpackError;
+import ratpack.func.util.Types;
+import ratpack.func.util.internal.InternalRatpackError;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

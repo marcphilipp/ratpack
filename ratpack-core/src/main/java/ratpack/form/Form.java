@@ -16,21 +16,21 @@
 
 package ratpack.form;
 
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 import ratpack.form.internal.DefaultFormParseOpts;
 import ratpack.parse.Parse;
-import ratpack.util.MultiValueMap;
+import ratpack.func.util.MultiValueMap;
 
 import java.util.List;
 
 /**
  * An uploaded form.
  * <p>
- * The form is modelled as a {@link ratpack.util.MultiValueMap}, with extra methods for dealing with file uploads.
- * That is, uploaded files are not visible via the methods provided by {@link ratpack.util.MultiValueMap}.
+ * The form is modelled as a {@link ratpack.func.util.MultiValueMap}, with extra methods for dealing with file uploads.
+ * That is, uploaded files are not visible via the methods provided by {@link ratpack.func.util.MultiValueMap}.
  * <p>
  * All instances of this type are <b>immutable</b>.
- * Calling any mutative method of {@link ratpack.util.MultiValueMap} will result in an {@link UnsupportedOperationException}.
+ * Calling any mutative method of {@link ratpack.func.util.MultiValueMap} will result in an {@link UnsupportedOperationException}.
  * <h3>Example usage:</h3>
  * <pre class="java">{@code
  * import ratpack.handling.Handler;

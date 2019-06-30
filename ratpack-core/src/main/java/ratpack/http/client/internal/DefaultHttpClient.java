@@ -36,7 +36,7 @@ import ratpack.http.client.ReceivedResponse;
 import ratpack.http.client.RequestSpec;
 import ratpack.http.client.StreamedResponse;
 import ratpack.server.ServerConfig;
-import ratpack.util.internal.TransportDetector;
+import ratpack.exec.util.TransportDetector;
 
 import java.net.URI;
 import java.time.Duration;

@@ -33,15 +33,15 @@ import ratpack.exec.Operation;
 import ratpack.exec.Promise;
 import ratpack.exec.UnmanagedThreadException;
 import ratpack.func.Action;
-import ratpack.registry.RegistrySpec;
+import ratpack.exec.registry.RegistrySpec;
 import ratpack.rx2.internal.DefaultSchedulers;
 import ratpack.rx2.internal.ErrorHandler;
 import ratpack.rx2.internal.ExecControllerBackedScheduler;
 import ratpack.rx2.internal.ExecutionBackedObserver;
 import ratpack.rx2.internal.ExecutionBackedSubscriber;
-import ratpack.stream.Streams;
-import ratpack.stream.TransformablePublisher;
-import ratpack.util.Exceptions;
+import ratpack.exec.stream.Streams;
+import ratpack.exec.stream.TransformablePublisher;
+import ratpack.func.util.Exceptions;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -347,7 +347,7 @@ public abstract class RxRatpack {
    * <p>
    * <pre class="java">{@code
    * import ratpack.rx2.RxRatpack;
-   * import ratpack.stream.Streams;
+   * import ratpack.exec.stream.Streams;
    * import ratpack.test.exec.ExecHarness;
    * import io.reactivex.Observable;
    * import io.reactivex.BackpressureStrategy;
@@ -391,7 +391,7 @@ public abstract class RxRatpack {
    * <p>
    * <pre class="java">{@code
    * import ratpack.rx2.RxRatpack;
-   * import ratpack.stream.Streams;
+   * import ratpack.exec.stream.Streams;
    * import ratpack.test.exec.ExecHarness;
    * import io.reactivex.Observable;
    * import io.reactivex.BackpressureStrategy;

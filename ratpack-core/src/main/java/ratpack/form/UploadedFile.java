@@ -16,7 +16,7 @@
 
 package ratpack.form;
 
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 import ratpack.http.TypedData;
 
 /**

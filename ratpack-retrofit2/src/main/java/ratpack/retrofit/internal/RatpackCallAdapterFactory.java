@@ -22,7 +22,7 @@ import ratpack.func.Factory;
 import ratpack.http.client.HttpClient;
 import ratpack.http.client.ReceivedResponse;
 import ratpack.retrofit.RatpackRetrofitCallException;
-import ratpack.util.Exceptions;
+import ratpack.func.util.Exceptions;
 import retrofit2.*;
 
 import java.lang.annotation.Annotation;

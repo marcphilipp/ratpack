@@ -20,11 +20,11 @@ import io.netty.handler.codec.http.HttpHeaderNames;
 import ratpack.file.FileHandlerSpec;
 import ratpack.func.Action;
 import ratpack.func.Predicate;
-import ratpack.registry.Registry;
-import ratpack.registry.RegistrySpec;
+import ratpack.exec.registry.Registry;
+import ratpack.exec.registry.RegistrySpec;
 import ratpack.server.RatpackServerSpec;
 import ratpack.server.ServerConfig;
-import ratpack.util.Exceptions;
+import ratpack.func.util.Exceptions;
 
 import java.util.Optional;
 
@@ -827,7 +827,7 @@ public interface Chain {
   }
 
   /**
-   * Adds a handler that inserts the given handler chain with the given registry via {@link Context#insert(ratpack.registry.Registry, Handler...)}.
+   * Adds a handler that inserts the given handler chain with the given registry via {@link Context#insert(ratpack.exec.registry.Registry, Handler...)}.
    *
    * @param registry the registry to insert
    * @param action the definition of the handler chain
@@ -843,7 +843,7 @@ public interface Chain {
   }
 
   /**
-   * Adds a handler that inserts the given handler chain with a registry built by the given action via {@link Context#insert(ratpack.registry.Registry, Handler...)}.
+   * Adds a handler that inserts the given handler chain with a registry built by the given action via {@link Context#insert(ratpack.exec.registry.Registry, Handler...)}.
    *
    * @param registryAction the definition of the registry to insert]
    * @param action the definition of the handler chain

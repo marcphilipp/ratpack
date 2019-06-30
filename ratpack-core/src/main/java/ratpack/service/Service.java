@@ -16,7 +16,7 @@
 
 package ratpack.service;
 
-import ratpack.api.NonBlocking;
+import ratpack.func.api.NonBlocking;
 import ratpack.exec.Blocking;
 import ratpack.func.Action;
 import ratpack.server.RatpackServer;

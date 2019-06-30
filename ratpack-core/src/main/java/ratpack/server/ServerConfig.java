@@ -19,7 +19,7 @@ package ratpack.server;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.reflect.TypeToken;
 import io.netty.handler.ssl.SslContext;
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 import ratpack.config.ConfigData;
 import ratpack.config.ConfigObject;
 import ratpack.file.FileSystemBinding;
@@ -29,7 +29,7 @@ import ratpack.http.Request;
 import ratpack.impose.Impositions;
 import ratpack.server.internal.DefaultServerConfigBuilder;
 import ratpack.server.internal.ServerEnvironment;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import javax.net.ssl.SSLContext;
 import java.net.InetAddress;

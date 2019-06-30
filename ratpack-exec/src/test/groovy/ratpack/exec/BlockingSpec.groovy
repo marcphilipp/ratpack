@@ -22,7 +22,7 @@ import ratpack.http.client.RequestSpec
 import ratpack.test.internal.RatpackGroovyDslSpec
 import ratpack.test.internal.SimpleErrorHandler
 
-import static ratpack.util.Exceptions.uncheck
+import static ratpack.func.util.Exceptions.uncheck
 
 class BlockingSpec extends RatpackGroovyDslSpec {
 

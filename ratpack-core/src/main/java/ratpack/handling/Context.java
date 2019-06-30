@@ -18,7 +18,7 @@ package ratpack.handling;
 
 import com.google.common.reflect.TypeToken;
 import org.reactivestreams.Publisher;
-import ratpack.api.NonBlocking;
+import ratpack.func.api.NonBlocking;
 import ratpack.error.ClientErrorHandler;
 import ratpack.error.ServerErrorHandler;
 import ratpack.exec.Execution;
@@ -40,13 +40,13 @@ import ratpack.parse.Parse;
 import ratpack.parse.Parser;
 import ratpack.path.PathBinding;
 import ratpack.path.PathTokens;
-import ratpack.registry.NotInRegistryException;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.NotInRegistryException;
+import ratpack.exec.registry.Registry;
 import ratpack.render.*;
 import ratpack.server.PublicAddress;
 import ratpack.server.ServerConfig;
-import ratpack.stream.Streams;
-import ratpack.util.Types;
+import ratpack.exec.stream.Streams;
+import ratpack.func.util.Types;
 
 import java.net.URI;
 import java.nio.file.Path;

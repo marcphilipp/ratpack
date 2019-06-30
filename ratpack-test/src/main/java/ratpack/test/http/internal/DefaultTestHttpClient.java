@@ -37,7 +37,7 @@ import ratpack.test.ApplicationUnderTest;
 import ratpack.test.http.TestHttpClient;
 import ratpack.test.internal.BlockingHttpClient;
 import ratpack.test.internal.TestByteBufAllocators;
-import ratpack.util.Exceptions;
+import ratpack.func.util.Exceptions;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -46,7 +46,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 public class DefaultTestHttpClient implements TestHttpClient {
 

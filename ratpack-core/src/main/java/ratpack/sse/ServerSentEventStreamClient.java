@@ -22,8 +22,8 @@ import ratpack.func.Action;
 import ratpack.http.client.HttpClient;
 import ratpack.http.client.RequestSpec;
 import ratpack.sse.internal.DefaultServerSentEventStreamClient;
-import ratpack.stream.TransformablePublisher;
-import ratpack.util.Exceptions;
+import ratpack.exec.stream.TransformablePublisher;
+import ratpack.func.util.Exceptions;
 
 import java.net.URI;
 

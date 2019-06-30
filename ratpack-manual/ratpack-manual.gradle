@@ -59,8 +59,6 @@ dependencies {
   testCompile gradleTestKit()
   testRuntime "org.apache.ant:ant-nodeps:1.8.1"
   testRuntime "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${commonVersions.jackson}"
-
-  testRuntime project(path: ":ratpack-pac4j", configuration: "testRuntime")
 }
 
 // Gradle needs to use its version of Groovy, exclude ours

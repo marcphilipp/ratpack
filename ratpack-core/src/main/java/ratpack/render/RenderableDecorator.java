@@ -21,7 +21,7 @@ import com.google.common.reflect.TypeToken;
 import ratpack.exec.Promise;
 import ratpack.func.Action;
 import ratpack.handling.Context;
-import ratpack.registry.RegistrySpec;
+import ratpack.exec.registry.RegistrySpec;
 
 import java.util.function.BiFunction;
 

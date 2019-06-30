@@ -28,7 +28,7 @@ import ratpack.config.EnvironmentParser;
 import ratpack.func.Action;
 import ratpack.func.Function;
 import ratpack.impose.ServerConfigImposition;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import javax.net.ssl.SSLContext;
 import java.io.File;

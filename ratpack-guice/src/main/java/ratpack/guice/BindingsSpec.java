@@ -24,14 +24,14 @@ import com.google.inject.TypeLiteral;
 import com.google.inject.multibindings.Multibinder;
 import ratpack.func.Action;
 import ratpack.guice.internal.GuiceUtil;
-import ratpack.registry.RegistrySpec;
-import ratpack.registry.internal.TypeCaching;
+import ratpack.exec.registry.RegistrySpec;
+import ratpack.func.util.TypeCaching;
 import ratpack.server.ServerConfig;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import java.util.function.Supplier;
 
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 /**
  * A buildable specification of Guice bindings.

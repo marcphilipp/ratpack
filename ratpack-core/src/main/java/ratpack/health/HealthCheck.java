@@ -19,13 +19,13 @@ package ratpack.health;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSortedMap;
 import com.google.common.collect.Iterables;
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 import ratpack.exec.Promise;
 import ratpack.exec.Throttle;
 import ratpack.exec.util.ParallelBatch;
 import ratpack.func.Function;
 import ratpack.func.Pair;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

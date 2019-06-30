@@ -17,7 +17,7 @@
 package ratpack.handling;
 
 import ratpack.func.Action;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 
 /**
  * Decorates a handler, effectively wrapping it.

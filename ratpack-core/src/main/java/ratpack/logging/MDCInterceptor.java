@@ -22,7 +22,7 @@ import ratpack.exec.ExecInterceptor;
 import ratpack.exec.Execution;
 import ratpack.func.Action;
 import ratpack.func.Block;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import java.util.HashMap;
 import java.util.Map;

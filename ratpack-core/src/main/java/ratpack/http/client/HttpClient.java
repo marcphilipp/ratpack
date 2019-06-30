@@ -21,9 +21,9 @@ import org.reactivestreams.Publisher;
 import ratpack.exec.Promise;
 import ratpack.func.Action;
 import ratpack.http.client.internal.DefaultHttpClient;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 import ratpack.server.ServerConfig;
-import ratpack.util.Exceptions;
+import ratpack.func.util.Exceptions;
 
 import java.net.URI;
 import java.time.Duration;

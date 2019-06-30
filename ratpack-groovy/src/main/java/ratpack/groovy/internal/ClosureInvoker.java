@@ -22,8 +22,8 @@ import com.google.common.reflect.TypeToken;
 import groovy.lang.Closure;
 import ratpack.func.Action;
 import ratpack.handling.internal.Extractions;
-import ratpack.registry.Registry;
-import ratpack.registry.internal.TypeCaching;
+import ratpack.exec.registry.Registry;
+import ratpack.func.util.TypeCaching;
 
 import java.util.Collections;
 import java.util.List;

@@ -16,7 +16,7 @@
 
 package ratpack.file.internal;
 
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 
 public interface FileSystemChecksumService {
 

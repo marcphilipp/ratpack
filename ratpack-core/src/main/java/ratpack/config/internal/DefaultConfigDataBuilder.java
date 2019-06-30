@@ -35,8 +35,8 @@ import ratpack.file.FileSystemBinding;
 import ratpack.func.Action;
 import ratpack.func.Function;
 import ratpack.server.internal.ServerEnvironment;
-import ratpack.util.Exceptions;
-import ratpack.util.internal.Paths2;
+import ratpack.func.util.Exceptions;
+import ratpack.func.util.internal.Paths2;
 
 import java.net.URL;
 import java.nio.file.Path;

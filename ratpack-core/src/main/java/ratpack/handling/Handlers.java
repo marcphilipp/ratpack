@@ -16,7 +16,7 @@
 
 package ratpack.handling;
 
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 import ratpack.file.FileHandlerSpec;
 import ratpack.file.internal.DefaultFileHandlerSpec;
 import ratpack.file.internal.FileSystemBindingHandler;
@@ -26,7 +26,7 @@ import ratpack.func.Predicate;
 import ratpack.handling.internal.*;
 import ratpack.path.PathBinder;
 import ratpack.path.internal.PathHandler;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 import ratpack.server.ServerConfig;
 
 import java.util.List;

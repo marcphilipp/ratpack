@@ -27,8 +27,8 @@ import ratpack.groovy.internal.ClosureUtil;
 import ratpack.handling.Chain;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-import ratpack.registry.Registry;
-import ratpack.registry.RegistrySpec;
+import ratpack.exec.registry.Registry;
+import ratpack.exec.registry.RegistrySpec;
 
 import static ratpack.groovy.Groovy.chainAction;
 import static ratpack.groovy.Groovy.groovyHandler;

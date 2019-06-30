@@ -24,7 +24,7 @@ import java.util.Collection;
 /**
  * A message broadcaster for sending Hystrix command metrics to its subscribers.
  */
-public class HystrixCommandMetricsBroadcaster extends ratpack.stream.internal.MulticastPublisher<Collection<HystrixCommandMetrics>> {
+public class HystrixCommandMetricsBroadcaster extends ratpack.exec.stream.internal.MulticastPublisher<Collection<HystrixCommandMetrics>> {
 
   @Inject
   public HystrixCommandMetricsBroadcaster(HystrixCommandMetricsPeriodicPublisher publisher) {

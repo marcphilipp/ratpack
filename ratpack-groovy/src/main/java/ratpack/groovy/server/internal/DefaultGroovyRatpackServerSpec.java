@@ -20,7 +20,7 @@ import ratpack.func.Action;
 import ratpack.func.Function;
 import ratpack.groovy.server.GroovyRatpackServerSpec;
 import ratpack.handling.Handler;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 import ratpack.server.RatpackServerSpec;
 import ratpack.server.ServerConfig;
 import ratpack.server.ServerConfigBuilder;

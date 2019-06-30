@@ -23,7 +23,7 @@ import javax.inject.Inject;
 /**
  * A message broadcaster for sending metrics to its subscribers.
  */
-public class MetricsBroadcaster extends ratpack.stream.internal.MulticastPublisher<MetricRegistry> {
+public class MetricsBroadcaster extends ratpack.exec.stream.internal.MulticastPublisher<MetricRegistry> {
 
   @Inject
   public MetricsBroadcaster(MetricRegistryPeriodicPublisher publisher) {

@@ -24,7 +24,7 @@ import ratpack.func.Block
 import ratpack.http.Headers
 import ratpack.server.ServerConfig
 import ratpack.server.internal.RequestBodyReader
-import ratpack.stream.TransformablePublisher
+import ratpack.exec.stream.TransformablePublisher
 import ratpack.test.internal.RatpackGroovyDslSpec
 
 import java.time.Instant

@@ -19,7 +19,7 @@ package ratpack.manual.snippets.extractor
 import ratpack.test.internal.snippets.TestCodeSnippet
 import ratpack.test.internal.snippets.executer.ExceptionTransformer
 import ratpack.test.internal.snippets.executer.SnippetExecuter
-import ratpack.util.RatpackVersion
+import ratpack.func.util.RatpackVersion
 
 import java.util.regex.Pattern
 

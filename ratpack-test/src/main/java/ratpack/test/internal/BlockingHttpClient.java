@@ -28,7 +28,7 @@ import ratpack.http.client.ReceivedResponse;
 import ratpack.http.client.RequestSpec;
 import ratpack.http.client.internal.DefaultReceivedResponse;
 import ratpack.http.internal.ByteBufBackedTypedData;
-import ratpack.util.Exceptions;
+import ratpack.func.util.Exceptions;
 
 import java.net.URI;
 import java.time.Duration;

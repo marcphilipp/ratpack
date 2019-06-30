@@ -16,7 +16,7 @@
 
 package ratpack.handling;
 
-import ratpack.api.NonBlocking;
+import ratpack.func.api.NonBlocking;
 
 /**
  * A handler participates in the processing of a request/response pair, operating on a {@link Context}.
@@ -112,7 +112,7 @@ import ratpack.api.NonBlocking;
  *
  * @see Handlers
  * @see Chain
- * @see ratpack.registry.Registry
+ * @see ratpack.exec.registry.Registry
  */
 @FunctionalInterface
 public interface Handler {

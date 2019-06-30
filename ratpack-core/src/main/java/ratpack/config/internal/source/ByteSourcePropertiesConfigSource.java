@@ -17,7 +17,7 @@
 package ratpack.config.internal.source;
 
 import com.google.common.io.ByteSource;
-import ratpack.util.Exceptions;
+import ratpack.func.util.Exceptions;
 
 import java.io.IOException;
 import java.io.InputStream;

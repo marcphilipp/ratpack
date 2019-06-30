@@ -26,12 +26,12 @@ import ratpack.jackson.JsonParseOpts;
 import ratpack.parse.Parse;
 import ratpack.parse.Parser;
 import ratpack.parse.ParserSupport;
-import ratpack.util.Types;
+import ratpack.func.util.Types;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import static ratpack.util.Types.cast;
+import static ratpack.func.util.Types.cast;
 
 public class JsonParser extends ParserSupport<JsonParseOpts> {
 

@@ -16,7 +16,7 @@
 
 package ratpack.exec;
 
-import ratpack.api.NonBlocking;
+import ratpack.func.api.NonBlocking;
 import ratpack.exec.internal.CachingUpstream;
 import ratpack.exec.internal.DefaultExecution;
 import ratpack.exec.internal.DefaultPromise;
@@ -31,7 +31,7 @@ import ratpack.func.Factory;
 import ratpack.func.Function;
 import ratpack.func.Pair;
 import ratpack.func.Predicate;
-import ratpack.util.Exceptions;
+import ratpack.func.util.Exceptions;
 
 import java.time.Duration;
 import java.util.Objects;

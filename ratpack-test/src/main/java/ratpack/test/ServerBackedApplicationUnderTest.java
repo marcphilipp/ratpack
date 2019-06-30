@@ -26,7 +26,7 @@ import ratpack.server.RatpackServer;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 /**
  * An {@link ApplicationUnderTest} implementation that manages a {@link RatpackServer}.

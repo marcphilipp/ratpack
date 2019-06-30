@@ -28,8 +28,8 @@ import java.util.concurrent.CountDownLatch
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.TimeUnit
 
-import static ratpack.stream.Streams.periodically
-import static ratpack.stream.Streams.publish
+import static ratpack.exec.stream.Streams.periodically
+import static ratpack.exec.stream.Streams.publish
 import static ratpack.websocket.WebSockets.websocket
 import static ratpack.websocket.WebSockets.websocketBroadcast
 

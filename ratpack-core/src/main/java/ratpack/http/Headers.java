@@ -17,8 +17,8 @@
 package ratpack.http;
 
 import io.netty.handler.codec.http.HttpHeaders;
-import ratpack.api.Nullable;
-import ratpack.util.MultiValueMap;
+import ratpack.func.api.Nullable;
+import ratpack.func.util.MultiValueMap;
 
 import java.time.Instant;
 import java.util.Date;

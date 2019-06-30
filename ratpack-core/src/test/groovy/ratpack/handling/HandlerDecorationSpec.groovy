@@ -18,7 +18,7 @@ package ratpack.handling
 
 import ratpack.func.Action
 import ratpack.groovy.handling.GroovyChain
-import ratpack.registry.Registry
+import ratpack.exec.registry.Registry
 import ratpack.test.internal.RatpackGroovyDslSpec
 
 class HandlerDecorationSpec extends RatpackGroovyDslSpec {

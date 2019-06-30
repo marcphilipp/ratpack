@@ -18,8 +18,8 @@ package ratpack.groovy.handling.internal;
 
 import com.google.common.reflect.TypeToken;
 import groovy.lang.Closure;
-import ratpack.api.NonBlocking;
-import ratpack.api.Nullable;
+import ratpack.func.api.NonBlocking;
+import ratpack.func.api.Nullable;
 import ratpack.exec.Execution;
 import ratpack.exec.Promise;
 import ratpack.func.Action;
@@ -34,8 +34,8 @@ import ratpack.http.Response;
 import ratpack.http.TypedData;
 import ratpack.parse.Parse;
 import ratpack.path.PathBinding;
-import ratpack.registry.NotInRegistryException;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.NotInRegistryException;
+import ratpack.exec.registry.Registry;
 import ratpack.server.ServerConfig;
 
 import java.nio.file.Path;

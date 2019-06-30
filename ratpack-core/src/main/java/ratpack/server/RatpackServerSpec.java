@@ -21,8 +21,8 @@ import ratpack.func.Function;
 import ratpack.handling.Chain;
 import ratpack.handling.Handler;
 import ratpack.handling.Handlers;
-import ratpack.registry.Registry;
-import ratpack.registry.RegistrySpec;
+import ratpack.exec.registry.Registry;
+import ratpack.exec.registry.RegistrySpec;
 
 /**
  * A buildable specification of a Ratpack server.
@@ -51,7 +51,7 @@ public interface RatpackServerSpec {
    * @param action the definition of the user registry
    * @return {@code this}
    * @throws Exception any thrown by {@code action}
-   * @see #registry(ratpack.registry.Registry)
+   * @see #registry(ratpack.exec.registry.Registry)
    */
   default RatpackServerSpec registryOf(Action<? super RegistrySpec> action) throws Exception {
     return registry(r -> Registry.of(action));

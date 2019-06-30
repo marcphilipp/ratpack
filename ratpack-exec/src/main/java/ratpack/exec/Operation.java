@@ -16,7 +16,7 @@
 
 package ratpack.exec;
 
-import ratpack.api.NonBlocking;
+import ratpack.func.api.NonBlocking;
 import ratpack.exec.internal.DefaultOperation;
 import ratpack.func.Action;
 import ratpack.func.Block;

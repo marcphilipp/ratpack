@@ -30,7 +30,7 @@ import io.netty.handler.codec.http.cookie.DefaultCookie;
 import io.netty.handler.codec.http.cookie.ServerCookieEncoder;
 import io.netty.util.CharsetUtil;
 import org.reactivestreams.Publisher;
-import ratpack.api.Nullable;
+import ratpack.func.api.Nullable;
 import ratpack.exec.Operation;
 import ratpack.file.internal.ResponseTransmitter;
 import ratpack.func.Action;
@@ -38,7 +38,7 @@ import ratpack.http.Headers;
 import ratpack.http.MutableHeaders;
 import ratpack.http.Response;
 import ratpack.http.Status;
-import ratpack.util.MultiValueMap;
+import ratpack.func.util.MultiValueMap;
 
 import java.nio.CharBuffer;
 import java.nio.file.Path;

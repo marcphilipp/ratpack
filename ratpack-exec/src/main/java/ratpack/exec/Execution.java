@@ -22,7 +22,7 @@ import ratpack.exec.internal.DefaultExecution;
 import ratpack.exec.internal.ExecThreadBinding;
 import ratpack.func.Action;
 import ratpack.func.Block;
-import ratpack.registry.MutableRegistry;
+import ratpack.exec.registry.MutableRegistry;
 
 import java.time.Duration;
 import java.util.Optional;

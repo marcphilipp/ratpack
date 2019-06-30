@@ -25,7 +25,7 @@ import ratpack.http.client.HttpClient;
 import ratpack.retrofit.internal.RatpackCallAdapterFactory;
 import ratpack.retrofit.internal.RatpackCallFactory;
 import ratpack.retrofit.internal.ReceivedResponseConverterFactory;
-import ratpack.util.Exceptions;
+import ratpack.func.util.Exceptions;
 import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
@@ -147,7 +147,7 @@ public abstract class RatpackRetrofit {
      *   <li>{@link Context} in the current {@link Execution}</li>
      * </ul>
      * <p>
-     * If no {@link HttpClient} is found, a {@link ratpack.registry.NotInRegistryException} is thrown.
+     * If no {@link HttpClient} is found, a {@link ratpack.exec.registry.NotInRegistryException} is thrown.
      *
      * @param clientFactory a factory that generates a HttpClient to be used
      * @return {@code this}

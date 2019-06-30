@@ -20,7 +20,7 @@ import io.netty.buffer.ByteBuf;
 import ratpack.func.Action;
 import ratpack.http.MutableHeaders;
 import ratpack.http.Response;
-import ratpack.stream.TransformablePublisher;
+import ratpack.exec.stream.TransformablePublisher;
 
 /**
  * A received response to a http client request with streamed response content.

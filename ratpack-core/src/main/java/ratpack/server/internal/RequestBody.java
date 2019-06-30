@@ -31,8 +31,8 @@ import ratpack.func.Block;
 import ratpack.http.ConnectionClosedException;
 import ratpack.http.RequestBodyAlreadyReadException;
 import ratpack.http.RequestBodyTooLargeException;
-import ratpack.stream.TransformablePublisher;
-import ratpack.stream.internal.BufferingPublisher;
+import ratpack.exec.stream.TransformablePublisher;
+import ratpack.exec.stream.internal.BufferingPublisher;
 
 import java.util.ArrayList;
 import java.util.List;

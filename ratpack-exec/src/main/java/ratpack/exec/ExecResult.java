@@ -18,7 +18,7 @@ package ratpack.exec;
 
 import ratpack.exec.internal.CompleteExecResult;
 import ratpack.exec.internal.ResultBackedExecResult;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 
 /**
  * The result of an execution.

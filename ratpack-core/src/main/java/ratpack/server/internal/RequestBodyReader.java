@@ -19,7 +19,7 @@ package ratpack.server.internal;
 import io.netty.buffer.ByteBuf;
 import ratpack.exec.Promise;
 import ratpack.func.Block;
-import ratpack.stream.TransformablePublisher;
+import ratpack.exec.stream.TransformablePublisher;
 
 public interface RequestBodyReader {
 

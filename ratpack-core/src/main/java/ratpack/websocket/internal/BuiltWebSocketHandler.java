@@ -23,7 +23,7 @@ import ratpack.websocket.WebSocketClose;
 import ratpack.websocket.WebSocketMessage;
 import ratpack.websocket.WebSocketHandler;
 
-import static ratpack.util.Exceptions.uncheck;
+import static ratpack.func.util.Exceptions.uncheck;
 
 public class BuiltWebSocketHandler<T> implements WebSocketHandler<T> {
 

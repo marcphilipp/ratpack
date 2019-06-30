@@ -41,7 +41,7 @@ import ratpack.http.Headers;
 import ratpack.http.MutableHeaders;
 import ratpack.http.Response;
 import ratpack.http.internal.*;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 import ratpack.render.internal.DefaultRenderController;
 import ratpack.server.ServerConfig;
 
