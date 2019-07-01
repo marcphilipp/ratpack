@@ -691,7 +691,7 @@ public abstract class RxRatpack {
    *
    * <pre class="java">{@code
    * import ratpack.exec.Execution;
-   * import ratpack.registry.RegistrySpec;
+   * import ratpack.exec.registry.RegistrySpec;
    * import ratpack.rx.RxRatpack;
    * import ratpack.test.exec.ExecHarness;
    *
@@ -741,7 +741,7 @@ public abstract class RxRatpack {
    *
    * <pre class="java">{@code
    * import ratpack.rx.RxRatpack;
-   * import ratpack.util.Exceptions;
+   * import ratpack.func.util.Exceptions;
    * import ratpack.test.exec.ExecHarness;
    *
    * import rx.Observable;

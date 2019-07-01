@@ -299,7 +299,7 @@ class GroovyScriptAppSpec extends RatpackGroovyScriptAppSpec {
   def "defining a class inside for ratpack.groovy"() {
     when:
     script """
-      import ratpack.server.*
+      import ratpack.service.*
       import ratpack.groovy.Groovy.Ratpack
 
       import org.slf4j.*

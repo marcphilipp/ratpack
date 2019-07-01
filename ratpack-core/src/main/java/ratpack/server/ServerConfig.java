@@ -198,7 +198,7 @@ public interface ServerConfig extends ConfigData {
    *
    * @return The SSL context or <code>null</code> if the application does not use SSL.
    */
-  SslContext getNettySslContext();
+  SslContext getSslContext();
 
   /**
    * The max content length to use for the HttpObjectAggregator.

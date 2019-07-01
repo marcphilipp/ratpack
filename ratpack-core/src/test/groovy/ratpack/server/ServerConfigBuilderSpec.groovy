@@ -165,10 +165,10 @@ class ServerConfigBuilderSpec extends Specification {
 
   def "set ssl context"() {
     given:
-    SSLContext context = SSLContexts.sslContext(ServerConfigBuilderSpec.classLoader.getResourceAsStream('ratpack/launch/internal/keystore.jks'), 'password')
+    def context = SSLContexts.sslContext(ServerConfigBuilderSpec.classLoader.getResourceAsStream('ratpack/launch/internal/keystore.jks'), 'password')
 
     when:
-    SSLContext sslContext = builder.ssl(context).build().sslContext
+    def sslContext = builder.ssl(context).build().sslContext
 
     then:
     sslContext

@@ -41,7 +41,7 @@ import ratpack.exec.registry.Registry;
  * import ratpack.server.ReloadInformant;
  * import ratpack.server.ServerConfig;
  * import ratpack.test.embed.EmbeddedApp;
- * import ratpack.registry.Registry;
+ * import ratpack.exec.registry.Registry;
  *
  * import static org.junit.Assert.assertEquals;
  *

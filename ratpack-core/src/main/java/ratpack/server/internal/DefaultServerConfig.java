@@ -81,7 +81,7 @@ public class DefaultServerConfig extends DelegatingConfigData implements ServerC
   }
 
   @Override
-  public SslContext getNettySslContext() {
+  public SslContext getSslContext() {
     return serverConfigData.getSslContext();
   }
 

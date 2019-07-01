@@ -33,7 +33,7 @@ import java.util.function.Supplier;
  * <pre class="tested">
  * import ratpack.handling.Handler;
  * import ratpack.handling.Context;
- * import ratpack.registry.Registry;
+ * import ratpack.exec.registry.Registry;
  *
  * import static org.junit.Assert.assertTrue;
  *
@@ -84,7 +84,7 @@ import java.util.function.Supplier;
  *
  * <pre class="java">{@code
  * import com.google.common.base.Joiner;
- * import ratpack.registry.Registry;
+ * import ratpack.exec.registry.Registry;
  *
  * import static org.junit.Assert.assertEquals;
  *
@@ -225,7 +225,7 @@ public interface Registry {
    * The returned registry is effectively the union of the two registries, with the {@code child} registry taking precedence.
    * This means that child entries are effectively “returned first”.
    * <pre class="java">{@code
-   * import ratpack.registry.Registry;
+   * import ratpack.exec.registry.Registry;
    *
    * import java.util.List;
    * import com.google.common.collect.Lists;

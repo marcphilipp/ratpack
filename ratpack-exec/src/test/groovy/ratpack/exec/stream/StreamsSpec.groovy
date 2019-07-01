@@ -33,6 +33,7 @@ import java.time.Duration
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.LinkedBlockingDeque
 
+import static ratpack.exec.stream.Streams.*
 import static ratpack.test.exec.ExecHarness.yieldSingle
 
 class StreamsSpec extends Specification {

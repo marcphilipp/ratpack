@@ -159,10 +159,10 @@ class TypeCoercingPropertiesSpec extends Specification {
     properties.asStream("key").text == content
 
     where:
-    propertyValue                   | description
-    file.absolutePath               | "a file path"
-    file.toURI().toString()         | "a URI"
-    "ratpack/util/internal/key.txt" | "a resource path"
+    propertyValue                        | description
+    file.absolutePath                    | "a file path"
+    file.toURI().toString()              | "a URI"
+    "ratpack/func/util/internal/key.txt" | "a resource path"
 
     content = file.text
   }

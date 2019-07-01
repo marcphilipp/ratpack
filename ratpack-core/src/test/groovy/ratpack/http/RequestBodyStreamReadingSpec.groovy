@@ -26,7 +26,7 @@ import org.reactivestreams.Subscription
 import ratpack.exec.Blocking
 import ratpack.exec.Promise
 import ratpack.http.client.RequestSpec
-import ratpack.registry.Registry
+import ratpack.exec.registry.Registry
 import ratpack.exec.stream.Streams
 import ratpack.exec.stream.bytebuf.ByteBufStreams
 import ratpack.test.internal.RatpackGroovyDslSpec

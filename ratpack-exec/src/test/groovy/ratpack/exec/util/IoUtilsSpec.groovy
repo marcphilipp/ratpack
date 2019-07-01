@@ -20,7 +20,6 @@ import com.google.common.collect.ImmutableMap
 import io.netty.buffer.ByteBufAllocator
 import org.junit.Rule
 import org.junit.rules.TemporaryFolder
-import ratpack.exec.util.IoUtils
 import spock.lang.Specification
 
 import java.nio.charset.StandardCharsets

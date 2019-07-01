@@ -87,7 +87,7 @@ public abstract class Types {
   /**
    * Creates a type token for a list of of the given type.
    * <pre class="java">{@code
-   * import ratpack.util.Types;
+   * import ratpack.func.util.Types;
    * import com.google.common.reflect.TypeToken;
    *
    * import java.util.List;

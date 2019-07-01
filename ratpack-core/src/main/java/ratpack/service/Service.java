@@ -144,7 +144,7 @@ import ratpack.server.RatpackServer;
  * import ratpack.service.StartEvent;
  * import ratpack.service.StopEvent;
  * import ratpack.guice.Guice;
- * import ratpack.util.Types;
+ * import ratpack.func.util.Types;
  * import javax.inject.Inject;
  *
  * import java.util.List;

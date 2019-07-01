@@ -144,7 +144,7 @@ public interface Context extends Registry {
    * The given registry is appended to the existing.
    * This means that it can shadow objects previously available.
    * <pre class="java">{@code
-   * import ratpack.registry.Registry;
+   * import ratpack.exec.registry.Registry;
    * import ratpack.test.embed.EmbeddedApp;
    *
    * import static org.junit.Assert.assertEquals;

@@ -32,7 +32,7 @@ import java.util.Optional;
  * Typically, health checks are added to the server registry.
  * <pre class="java">{@code
  * import ratpack.exec.Promise;
- * import ratpack.registry.Registry;
+ * import ratpack.exec.registry.Registry;
  * import ratpack.health.HealthCheck;
  * import ratpack.health.HealthCheckHandler;
  * import ratpack.test.embed.EmbeddedApp;

@@ -16,6 +16,9 @@
 
 package ratpack.ssl;
 
+import io.netty.handler.ssl.ClientAuth;
+import io.netty.handler.ssl.JdkSslContext;
+import io.netty.handler.ssl.SslContext;
 import ratpack.ssl.internal.SslContexts;
 
 import javax.net.ssl.KeyManagerFactory;
@@ -44,7 +47,7 @@ public class SSLContexts {
    * @throws GeneralSecurityException if the keystore is invalid, or the password is incorrect
    * @throws IOException if the url cannot be read
    */
-  public static SSLContext sslContext(URL keyStoreFile, String password) throws GeneralSecurityException, IOException {
+  public static SslContext sslContext(URL keyStoreFile, String password) throws GeneralSecurityException, IOException {
     try (InputStream stream = keyStoreFile.openStream()) {
       return sslContext(stream, password);
     }
@@ -61,7 +64,7 @@ public class SSLContexts {
    * @throws GeneralSecurityException if either the keystore or truststore is invalid, or the password is incorrect
    * @throws IOException if any of the urls cannot be read
    */
-  public static SSLContext sslContext(URL keyStoreFile, String keyStorePassword, URL trustStoreFile, String trustStorePassword) throws GeneralSecurityException, IOException {
+  public static SslContext sslContext(URL keyStoreFile, String keyStorePassword, URL trustStoreFile, String trustStorePassword) throws GeneralSecurityException, IOException {
     try (InputStream keyStoreStream = keyStoreFile.openStream(); InputStream trustStoreStream = trustStoreFile.openStream()) {
       return sslContext(keyStoreStream, keyStorePassword, trustStoreStream, trustStorePassword);
     }
@@ -76,7 +79,7 @@ public class SSLContexts {
    * @throws GeneralSecurityException if the keystore is invalid, or the password is incorrect
    * @throws IOException if the url cannot be read
    */
-  public static SSLContext sslContext(File keyStoreFile, String password) throws GeneralSecurityException, IOException {
+  public static SslContext sslContext(File keyStoreFile, String password) throws GeneralSecurityException, IOException {
     try (InputStream stream = new FileInputStream(keyStoreFile)) {
       return sslContext(stream, password);
     }
@@ -93,7 +96,7 @@ public class SSLContexts {
    * @throws GeneralSecurityException if either the keystore or truststore is invalid, or the password is incorrect
    * @throws IOException if any of the urls cannot be read
    */
-  public static SSLContext sslContext(File keyStoreFile, String keyStorePassword, File trustStoreFile, String trustStorePassword) throws GeneralSecurityException, IOException {
+  public static SslContext sslContext(File keyStoreFile, String keyStorePassword, File trustStoreFile, String trustStorePassword) throws GeneralSecurityException, IOException {
     try (InputStream keyStoreStream = new FileInputStream(keyStoreFile); InputStream trustStoreStream = new FileInputStream(trustStoreFile)) {
       return sslContext(keyStoreStream, keyStorePassword, trustStoreStream, trustStorePassword);
     }
@@ -108,7 +111,7 @@ public class SSLContexts {
    * @throws GeneralSecurityException if the keystore is invalid, or the password is incorrect
    * @throws IOException if the url cannot be read
    */
-  public static SSLContext sslContext(Path keyStoreFile, String password) throws GeneralSecurityException, IOException {
+  public static SslContext sslContext(Path keyStoreFile, String password) throws GeneralSecurityException, IOException {
     try (InputStream stream = Files.newInputStream(keyStoreFile)) {
       return sslContext(stream, password);
     }
@@ -125,7 +128,7 @@ public class SSLContexts {
    * @throws GeneralSecurityException if either the keystore or the truststore is invalid, or the password is incorrect
    * @throws IOException if any of the urls cannot be read
    */
-  public static SSLContext sslContext(Path keyStoreFile, String keyStorePassword, Path trustStoreFile, String trustStorePassword) throws GeneralSecurityException, IOException {
+  public static SslContext sslContext(Path keyStoreFile, String keyStorePassword, Path trustStoreFile, String trustStorePassword) throws GeneralSecurityException, IOException {
     try (InputStream keyStoreStream = Files.newInputStream(keyStoreFile); InputStream trustStoreStream = Files.newInputStream(trustStoreFile)) {
       return sslContext(keyStoreStream, keyStorePassword, trustStoreStream, trustStorePassword);
     }
@@ -140,7 +143,7 @@ public class SSLContexts {
    * @throws GeneralSecurityException if the keystore is invalid, or the password is incorrect
    * @throws IOException if the url cannot be read
    */
-  public static SSLContext sslContext(InputStream keyStoreStream, String password) throws GeneralSecurityException, IOException {
+  public static SslContext sslContext(InputStream keyStoreStream, String password) throws GeneralSecurityException, IOException {
     return sslContext(keyStoreStream, password.toCharArray(), null, null);
   }
 
@@ -160,11 +163,12 @@ public class SSLContexts {
    * @throws GeneralSecurityException if either the keystore or the truststore is invalid, or the password is incorrect
    * @throws IOException if any of the urls cannot be read
    */
-  public static SSLContext sslContext(InputStream keyStoreStream, String keyStorePassword, InputStream trustStoreStream, String trustStorePassword) throws GeneralSecurityException, IOException {
+  public static SslContext sslContext(InputStream keyStoreStream, String keyStorePassword, InputStream trustStoreStream, String trustStorePassword) throws GeneralSecurityException, IOException {
     return sslContext(keyStoreStream, keyStorePassword.toCharArray(), trustStoreStream, trustStorePassword.toCharArray());
   }
 
-  private static SSLContext sslContext(InputStream keyStoreStream, char[] keyStorePassword, InputStream trustStoreStream, char[] trustStorePassword) throws GeneralSecurityException, IOException {
+  @SuppressWarnings("deprecation")
+  private static SslContext sslContext(InputStream keyStoreStream, char[] keyStorePassword, InputStream trustStoreStream, char[] trustStorePassword) throws GeneralSecurityException, IOException {
     SSLContext sslContext = SSLContext.getInstance("TLS");
 
     KeyManagerFactory keyManagerFactory = null;
@@ -180,7 +184,7 @@ public class SSLContexts {
 
     sslContext.init(keyManagerFactory != null ? keyManagerFactory.getKeyManagers() : null, trustManagerFactory != null ? trustManagerFactory.getTrustManagers() : null, null);
 
-    return sslContext;
+    return new JdkSslContext(sslContext, false, ClientAuth.NONE);
   }
 
   private SSLContexts() {

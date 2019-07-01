@@ -213,7 +213,7 @@ public interface HealthCheck {
    * <pre class="java">{@code
    * import ratpack.test.exec.ExecHarness;
    * import ratpack.exec.Promise;
-   * import ratpack.registry.Registry;
+   * import ratpack.exec.registry.Registry;
    * import ratpack.health.HealthCheck;
    * import static org.junit.Assert.*;
    *

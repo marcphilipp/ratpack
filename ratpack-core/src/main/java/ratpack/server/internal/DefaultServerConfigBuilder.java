@@ -29,7 +29,6 @@ import io.netty.handler.ssl.SslContext;
 import ratpack.config.*;
 import ratpack.config.internal.DefaultConfigData;
 import ratpack.config.internal.DefaultConfigDataBuilder;
-import ratpack.config.internal.module.JdkSslContextDeserializer;
 import ratpack.config.internal.module.NettySslContextDeserializer;
 import ratpack.config.internal.module.ServerConfigDataDeserializer;
 import ratpack.file.FileSystemBinding;
@@ -41,7 +40,6 @@ import ratpack.impose.ServerConfigImposition;
 import ratpack.server.ServerConfig;
 import ratpack.server.ServerConfigBuilder;
 
-import javax.net.ssl.SSLContext;
 import java.net.InetAddress;
 import java.net.URI;
 import java.net.URL;
@@ -423,7 +421,6 @@ public class DefaultServerConfigBuilder implements ServerConfigBuilder {
         serverEnvironment.getPublicAddress(),
         baseDirSupplier
       ));
-      addDeserializer(SSLContext.class, new JdkSslContextDeserializer());
       addDeserializer(SslContext.class, new NettySslContextDeserializer());
     }
   }

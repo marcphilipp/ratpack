@@ -522,7 +522,7 @@ public abstract class ReactorRatpack {
    * <p>
    * <pre class="java">{@code
    * import ratpack.exec.Execution;
-   * import ratpack.registry.RegistrySpec;
+   * import ratpack.exec.registry.RegistrySpec;
    * import ratpack.reactor.ReactorRatpack;
    * import ratpack.test.exec.ExecHarness;
    * <p>
@@ -572,7 +572,7 @@ public abstract class ReactorRatpack {
    * <p>
    * <pre class="java">{@code
    * import ratpack.reactor.ReactorRatpack;
-   * import ratpack.util.Exceptions;
+   * import ratpack.func.util.Exceptions;
    * import ratpack.test.exec.ExecHarness;
    * <p>
    * import reactor.core.publisher.Flux;

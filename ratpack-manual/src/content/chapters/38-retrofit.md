@@ -165,7 +165,7 @@ If the remote API is responding in JSON, then the [`JacksonConverterFactory`](ht
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ratpack.exec.Promise;
 import ratpack.retrofit.RatpackRetrofit;
-import ratpack.registry.Registry;
+import ratpack.exec.registry.Registry;
 import ratpack.test.embed.EmbeddedApp;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 import retrofit2.http.GET;
