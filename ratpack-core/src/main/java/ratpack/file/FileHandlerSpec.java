@@ -16,6 +16,7 @@
 
 package ratpack.file;
 
+import ratpack.func.util.FileSystemBinding;
 import ratpack.handling.Chain;
 import ratpack.path.PathBinding;
 

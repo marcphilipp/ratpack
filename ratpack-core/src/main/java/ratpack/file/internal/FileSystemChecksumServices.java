@@ -16,7 +16,7 @@
 
 package ratpack.file.internal;
 
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.file.checksummer.internal.Adler32Checksummer;
 import ratpack.file.checksummer.internal.MD5Checksummer;
 import ratpack.func.Function;

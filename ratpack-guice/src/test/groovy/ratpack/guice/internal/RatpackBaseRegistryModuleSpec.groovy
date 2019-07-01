@@ -26,7 +26,7 @@ import ratpack.error.ServerErrorHandler
 import ratpack.exec.ExecController
 import ratpack.exec.Promise
 import ratpack.exec.internal.DefaultExecController
-import ratpack.file.FileSystemBinding
+import ratpack.func.util.FileSystemBinding
 import ratpack.file.MimeTypes
 import ratpack.form.FormParseOpts
 import ratpack.guice.Guice

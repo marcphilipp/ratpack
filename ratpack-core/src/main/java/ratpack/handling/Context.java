@@ -23,7 +23,7 @@ import ratpack.error.ClientErrorHandler;
 import ratpack.error.ServerErrorHandler;
 import ratpack.exec.Execution;
 import ratpack.exec.Promise;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.file.MimeTypes;
 import ratpack.func.Action;
 import ratpack.handling.direct.DirectChannelAccess;

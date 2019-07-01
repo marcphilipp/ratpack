@@ -22,6 +22,7 @@ import ratpack.func.Action;
 import ratpack.func.Predicate;
 import ratpack.exec.registry.Registry;
 import ratpack.exec.registry.RegistrySpec;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.server.RatpackServerSpec;
 import ratpack.server.ServerConfig;
 import ratpack.func.util.Exceptions;
@@ -369,7 +370,7 @@ public interface Chain {
   }
 
   /**
-   * Adds a handler to this chain that changes the {@link ratpack.file.FileSystemBinding} for the given handler chain.
+   * Adds a handler to this chain that changes the {@link FileSystemBinding} for the given handler chain.
    *
    * @param path the relative path to the new file system binding point
    * @param action the definition of the all chain

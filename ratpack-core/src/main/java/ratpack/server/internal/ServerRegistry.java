@@ -31,7 +31,7 @@ import ratpack.exec.ExecController;
 import ratpack.exec.ExecInitializer;
 import ratpack.exec.ExecInterceptor;
 import ratpack.exec.internal.ExecControllerInternal;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.file.MimeTypes;
 import ratpack.file.internal.ActivationBackedMimeTypes;
 import ratpack.file.internal.FileRenderer;

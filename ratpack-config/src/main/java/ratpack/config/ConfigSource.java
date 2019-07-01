@@ -18,7 +18,7 @@ package ratpack.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 
 /**
  * Allows providing custom sources of configuration data.

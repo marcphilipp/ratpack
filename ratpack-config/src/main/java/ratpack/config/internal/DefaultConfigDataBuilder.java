@@ -31,10 +31,10 @@ import ratpack.config.ConfigDataBuilder;
 import ratpack.config.ConfigSource;
 import ratpack.config.EnvironmentParser;
 import ratpack.config.internal.source.*;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.func.Action;
 import ratpack.func.Function;
-import ratpack.server.internal.ServerEnvironment;
+import ratpack.func.util.internal.Environment;
 import ratpack.func.util.Exceptions;
 import ratpack.func.util.internal.Paths2;
 
@@ -46,28 +46,28 @@ import java.util.Properties;
 
 public class DefaultConfigDataBuilder implements ConfigDataBuilder {
   private final ImmutableList.Builder<ConfigSource> sources = ImmutableList.builder();
-  private final ServerEnvironment serverEnvironment;
+  private final Environment environment;
   private final ObjectMapper objectMapper;
   private Action<? super Throwable> errorHandler = Action.throwException();
 
-  public DefaultConfigDataBuilder(ServerEnvironment serverEnvironment) {
-    this(serverEnvironment, newDefaultObjectMapper());
+  public DefaultConfigDataBuilder(Environment environment) {
+    this(environment, newDefaultObjectMapper());
   }
 
-  public DefaultConfigDataBuilder(ServerEnvironment serverEnvironment, ObjectMapper objectMapper) {
-    this.serverEnvironment = serverEnvironment;
+  public DefaultConfigDataBuilder(Environment environment, ObjectMapper objectMapper) {
+    this.environment = environment;
     this.objectMapper = objectMapper;
   }
 
-  private DefaultConfigDataBuilder(ServerEnvironment serverEnvironment, ObjectMapper objectMapper, ImmutableList.Builder<ConfigSource> sources, Action<? super Throwable> errorHandler) {
-    this.serverEnvironment = serverEnvironment;
+  private DefaultConfigDataBuilder(Environment environment, ObjectMapper objectMapper, ImmutableList.Builder<ConfigSource> sources, Action<? super Throwable> errorHandler) {
+    this.environment = environment;
     this.objectMapper = objectMapper;
     this.sources.addAll(sources.build());
     this.errorHandler = errorHandler;
   }
 
   public DefaultConfigDataBuilder copy() {
-    return new DefaultConfigDataBuilder(serverEnvironment, objectMapper, sources, errorHandler);
+    return new DefaultConfigDataBuilder(environment, objectMapper, sources, errorHandler);
   }
 
   @Override
@@ -103,22 +103,22 @@ public class DefaultConfigDataBuilder implements ConfigDataBuilder {
 
   @Override
   public ConfigDataBuilder env() {
-    return add(new EnvironmentConfigSource(serverEnvironment));
+    return add(new EnvironmentConfigSource(environment));
   }
 
   @Override
   public ConfigDataBuilder env(String prefix) {
-    return add(new EnvironmentConfigSource(serverEnvironment, prefix));
+    return add(new EnvironmentConfigSource(environment, prefix));
   }
 
   @Override
   public ConfigDataBuilder env(String prefix, Function<String, String> mapFunc) {
-    return add(new EnvironmentConfigSource(serverEnvironment, prefix, mapFunc));
+    return add(new EnvironmentConfigSource(environment, prefix, mapFunc));
   }
 
   @Override
   public ConfigDataBuilder env(EnvironmentParser environmentParser) {
-    return add(new EnvironmentConfigSource(serverEnvironment, environmentParser));
+    return add(new EnvironmentConfigSource(environment, environmentParser));
   }
 
   @Override
@@ -168,7 +168,7 @@ public class DefaultConfigDataBuilder implements ConfigDataBuilder {
 
   @Override
   public ConfigDataBuilder sysProps(String prefix) {
-    return add(new PropertiesConfigSource(Optional.of(prefix), serverEnvironment.getProperties()));
+    return add(new PropertiesConfigSource(Optional.of(prefix), environment.getProperties()));
   }
 
   @Override

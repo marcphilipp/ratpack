@@ -23,7 +23,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.common.io.ByteSource;
 import com.google.common.io.Resources;
 import ratpack.config.ConfigSource;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.func.util.internal.Paths2;
 
 import java.io.InputStream;

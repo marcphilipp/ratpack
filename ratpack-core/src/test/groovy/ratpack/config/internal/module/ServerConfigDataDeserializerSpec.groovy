@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 the original author or authors.
+ * Copyright 2019 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ package ratpack.config.internal.module
 
 import com.fasterxml.jackson.databind.JsonNode
 import ratpack.config.internal.DefaultConfigDataBuilder
-import ratpack.file.FileSystemBinding
+import ratpack.func.util.FileSystemBinding
 import ratpack.server.internal.ServerConfigData
 import ratpack.server.internal.ServerEnvironment
 import ratpack.test.embed.EphemeralBaseDir

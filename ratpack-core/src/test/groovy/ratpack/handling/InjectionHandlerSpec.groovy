@@ -21,8 +21,8 @@ import com.google.inject.TypeLiteral
 import ratpack.error.ServerErrorHandler
 import ratpack.error.internal.DefaultDevelopmentErrorHandler
 import ratpack.error.internal.DefaultProductionErrorHandler
-import ratpack.file.FileSystemBinding
-import ratpack.file.internal.DefaultFileSystemBinding
+import ratpack.func.util.FileSystemBinding
+import ratpack.func.util.internal.DefaultFileSystemBinding
 import ratpack.test.internal.RatpackGroovyDslSpec
 
 class InjectionHandlerSpec extends RatpackGroovyDslSpec {

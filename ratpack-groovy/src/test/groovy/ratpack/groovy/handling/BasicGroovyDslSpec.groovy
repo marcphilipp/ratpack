@@ -18,8 +18,8 @@ package ratpack.groovy.handling
 
 import ratpack.error.ServerErrorHandler
 import ratpack.error.internal.DefaultProductionErrorHandler
-import ratpack.file.FileSystemBinding
-import ratpack.file.internal.DefaultFileSystemBinding
+import ratpack.func.util.FileSystemBinding
+import ratpack.func.util.internal.DefaultFileSystemBinding
 import ratpack.test.internal.RatpackGroovyDslSpec
 
 class BasicGroovyDslSpec extends RatpackGroovyDslSpec {

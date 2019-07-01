@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import ratpack.config.ConfigSource;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 
 import java.util.Arrays;
 import java.util.Iterator;

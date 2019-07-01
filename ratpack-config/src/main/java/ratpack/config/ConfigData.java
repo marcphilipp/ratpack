@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.common.reflect.TypeToken;
 import ratpack.config.internal.DefaultConfigDataBuilder;
 import ratpack.func.Action;
-import ratpack.server.internal.ServerEnvironment;
+import ratpack.func.util.internal.Environment;
 import ratpack.func.util.Types;
 
 /**
@@ -108,11 +108,11 @@ public interface ConfigData {
   }
 
   static ConfigDataBuilder builder() {
-    return new DefaultConfigDataBuilder(ServerEnvironment.env());
+    return new DefaultConfigDataBuilder(Environment.env());
   }
 
   static ConfigDataBuilder builder(ObjectMapper objectMapper) {
-    return new DefaultConfigDataBuilder(ServerEnvironment.env(), objectMapper);
+    return new DefaultConfigDataBuilder(Environment.env(), objectMapper);
   }
 
   /**

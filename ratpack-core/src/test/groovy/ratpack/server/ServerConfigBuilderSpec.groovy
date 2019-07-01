@@ -19,8 +19,6 @@ package ratpack.server
 import ratpack.ssl.SSLContexts
 import spock.lang.Specification
 
-import javax.net.ssl.SSLContext
-
 class ServerConfigBuilderSpec extends Specification {
 
   ServerConfigBuilder builder

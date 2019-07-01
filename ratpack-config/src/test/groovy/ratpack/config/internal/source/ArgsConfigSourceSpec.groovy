@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 the original author or authors.
+ * Copyright 2019 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ package ratpack.config.internal.source
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import ratpack.config.internal.DefaultConfigDataBuilder
-import ratpack.file.FileSystemBinding
+import ratpack.func.util.FileSystemBinding
 import spock.lang.Specification
 
 class ArgsConfigSourceSpec extends Specification {

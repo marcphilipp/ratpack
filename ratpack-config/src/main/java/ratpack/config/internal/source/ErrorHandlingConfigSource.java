@@ -19,7 +19,7 @@ package ratpack.config.internal.source;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import ratpack.config.ConfigSource;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.func.Action;
 
 /**

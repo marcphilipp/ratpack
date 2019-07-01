@@ -24,7 +24,7 @@ import com.google.common.reflect.TypeToken;
 import com.google.inject.Injector;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.guice.ConfigurableModule;
 import ratpack.guice.internal.GuiceUtil;
 import ratpack.handlebars.internal.FileSystemBindingTemplateLoader;

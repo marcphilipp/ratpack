@@ -22,6 +22,7 @@ import org.codehaus.groovy.runtime.DefaultGroovyMethods;
 import ratpack.file.FileHandlerSpec;
 import ratpack.func.Action;
 import ratpack.func.Predicate;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.groovy.handling.internal.DefaultGroovyChain;
 import ratpack.groovy.internal.ClosureUtil;
 import ratpack.handling.Chain;
@@ -154,7 +155,7 @@ public interface GroovyChain extends Chain {
 
   /**
    * Creates a {@code List} of {@code Handler} from the given {@code Closure} and adds a {@code Handler} to this {@code GroovyChain} that
-   * changes the {@link ratpack.file.FileSystemBinding} for the {@code Handler} list.
+   * changes the {@link FileSystemBinding} for the {@code Handler} list.
    * <p>
    * See {@link GroovyChain#fileSystem(String, ratpack.func.Action)} for more details.
    *

@@ -19,7 +19,7 @@ package ratpack.remote
 import io.remotecontrol.groovy.ContentType
 import io.remotecontrol.groovy.client.RemoteControl
 import io.remotecontrol.transport.http.HttpTransport
-import ratpack.file.FileSystemBinding
+import ratpack.func.util.FileSystemBinding
 import ratpack.http.client.RequestSpec
 import ratpack.http.internal.HttpHeaderConstants
 import ratpack.render.Renderer

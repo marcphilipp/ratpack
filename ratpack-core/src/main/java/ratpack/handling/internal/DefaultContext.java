@@ -27,7 +27,7 @@ import ratpack.error.ServerErrorHandler;
 import ratpack.exec.ExecController;
 import ratpack.exec.Execution;
 import ratpack.exec.Promise;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.file.internal.ResponseTransmitter;
 import ratpack.func.Action;
 import ratpack.func.Function;

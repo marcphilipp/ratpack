@@ -29,7 +29,7 @@ import io.netty.handler.ssl.JdkSslContext;
 import io.netty.handler.ssl.SslContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.server.ServerConfig;
 import ratpack.server.internal.ServerConfigData;
 import ratpack.server.internal.ServerEnvironment;

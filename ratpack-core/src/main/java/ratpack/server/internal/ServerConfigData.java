@@ -17,7 +17,7 @@
 package ratpack.server.internal;
 
 import io.netty.handler.ssl.SslContext;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.server.ServerConfig;
 
 import java.net.InetAddress;

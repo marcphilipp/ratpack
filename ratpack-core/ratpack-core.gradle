@@ -33,6 +33,7 @@ ext.apiLinks = [
 
 dependencies {
   compile project(":ratpack-exec")
+  compile project(":ratpack-config")
   compile "io.netty:netty-codec-http:$commonVersions.netty"
   compile "io.netty:netty-handler:$commonVersions.netty"
   compile 'com.sun.activation:javax.activation:1.2.0'
@@ -40,18 +41,6 @@ dependencies {
   compile "com.github.ben-manes.caffeine:caffeine:${commonVersions.caffeine}"
 
   compile 'org.javassist:javassist:3.22.0-GA'
-
-  compile commonDependencies.jackson
-  compile("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${commonVersions.jackson}") {
-    exclude group: "org.yaml", module: "snakeyaml"
-  }
-  compile("com.fasterxml.jackson.datatype:jackson-datatype-guava:${commonVersions.jackson}") {
-    exclude group: "com.google.guava", module: "guava"
-    exclude group: "org.yaml", module: "snakeyaml"
-  }
-  compile commonDependencies.snakeyaml
-  compile "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${commonVersions.jackson}"
-  compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${commonVersions.jackson}"
 
   testCompile 'org.apache.commons:commons-lang3:3.3.2'
 

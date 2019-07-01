@@ -25,7 +25,7 @@ import com.google.common.reflect.TypeToken;
 import ratpack.config.ConfigData;
 import ratpack.config.ConfigObject;
 import ratpack.config.ConfigSource;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.func.util.Exceptions;
 
 import java.io.IOException;

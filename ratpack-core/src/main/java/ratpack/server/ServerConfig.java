@@ -22,7 +22,7 @@ import io.netty.handler.ssl.SslContext;
 import ratpack.func.api.Nullable;
 import ratpack.config.ConfigData;
 import ratpack.config.ConfigObject;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.func.Action;
 import ratpack.http.ConnectionClosedException;
 import ratpack.http.Request;
@@ -357,7 +357,7 @@ public interface ServerConfig extends ConfigData {
   Duration getIdleTimeout();
 
   /**
-   * The base dir of the application, which is also the initial {@link ratpack.file.FileSystemBinding}.
+   * The base dir of the application, which is also the initial {@link FileSystemBinding}.
    *
    * @return The base dir of the application.
    * @throws NoBaseDirException if this launch config has no base dir set.

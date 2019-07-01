@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 the original author or authors.
+ * Copyright 2019 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-package ratpack.file;
+package ratpack.func.util;
 
 import com.google.common.reflect.TypeToken;
 import ratpack.func.api.Nullable;
-import ratpack.file.internal.DefaultFileSystemBinding;
-import ratpack.func.util.Types;
+import ratpack.func.util.internal.DefaultFileSystemBinding;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

@@ -31,7 +31,7 @@ import ratpack.config.internal.DefaultConfigData;
 import ratpack.config.internal.DefaultConfigDataBuilder;
 import ratpack.config.internal.module.NettySslContextDeserializer;
 import ratpack.config.internal.module.ServerConfigDataDeserializer;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.func.Action;
 import ratpack.impose.ForceDevelopmentImposition;
 import ratpack.impose.ForceServerListenPortImposition;

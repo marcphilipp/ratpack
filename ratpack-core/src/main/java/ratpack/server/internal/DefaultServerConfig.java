@@ -22,7 +22,7 @@ import ratpack.func.api.Nullable;
 import ratpack.config.ConfigData;
 import ratpack.config.ConfigObject;
 import ratpack.config.internal.DelegatingConfigData;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.server.NoBaseDirException;
 import ratpack.server.ServerConfig;
 

@@ -57,6 +57,7 @@ ext {
 
   publishedModules = [
     "ratpack-func",
+    "ratpack-config",
     "ratpack-consul",
     "ratpack-core",
     "ratpack-dropwizard-metrics",

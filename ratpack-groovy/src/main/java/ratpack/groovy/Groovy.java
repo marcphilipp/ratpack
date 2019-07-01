@@ -23,7 +23,7 @@ import groovy.lang.GroovySystem;
 import groovy.xml.MarkupBuilder;
 import io.netty.util.CharsetUtil;
 import ratpack.func.api.Nullable;
-import ratpack.file.FileSystemBinding;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.func.Action;
 import ratpack.func.Function;
 import ratpack.groovy.handling.*;

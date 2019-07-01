@@ -23,6 +23,7 @@ import ratpack.file.internal.FileSystemBindingHandler;
 import ratpack.func.Action;
 import ratpack.func.Block;
 import ratpack.func.Predicate;
+import ratpack.func.util.FileSystemBinding;
 import ratpack.handling.internal.*;
 import ratpack.path.PathBinder;
 import ratpack.path.internal.PathHandler;
@@ -162,9 +163,9 @@ public abstract class Handlers {
   }
 
   /**
-   * A handlers that changes the {@link ratpack.file.FileSystemBinding} for the given handlers.
+   * A handlers that changes the {@link FileSystemBinding} for the given handlers.
    * <p>
-   * The new file system binding will be created by the {@link ratpack.file.FileSystemBinding#binding(String)} method of the contextual binding.
+   * The new file system binding will be created by the {@link FileSystemBinding#binding(String)} method of the contextual binding.
    *
    * @param serverConfig The application server config
    * @param path The relative path to the new file system binding point
