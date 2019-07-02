@@ -23,10 +23,10 @@ import okio.Buffer;
 import okio.BufferedSource;
 import ratpack.exec.Promise;
 import ratpack.func.Factory;
-import ratpack.http.MutableHeaders;
-import ratpack.http.client.HttpClient;
-import ratpack.http.client.ReceivedResponse;
-import ratpack.http.client.RequestSpec;
+import ratpack.server.core.http.MutableHeaders;
+import ratpack.server.core.http.client.HttpClient;
+import ratpack.server.core.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.RequestSpec;
 
 import java.io.IOException;
 import java.util.List;

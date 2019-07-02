@@ -18,7 +18,7 @@ package ratpack.rx2
 
 import io.reactivex.functions.Action
 import io.reactivex.functions.Consumer
-import ratpack.error.ServerErrorHandler
+import ratpack.server.core.error.ServerErrorHandler
 import ratpack.exec.Blocking
 import ratpack.test.internal.RatpackGroovyDslSpec
 import ratpack.test.internal.SimpleErrorHandler

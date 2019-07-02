@@ -20,7 +20,7 @@ import org.reactivestreams.Subscriber
 import org.reactivestreams.Subscription
 import ratpack.func.Action
 import ratpack.func.Function
-import ratpack.http.ResponseChunks
+import ratpack.server.core.http.ResponseChunks
 import ratpack.exec.stream.Streams
 import ratpack.exec.stream.internal.BufferingPublisher
 import ratpack.exec.stream.internal.CollectingSubscriber

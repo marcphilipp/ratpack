@@ -19,11 +19,11 @@ package ratpack.groovy.server.internal;
 import ratpack.func.Action;
 import ratpack.func.Function;
 import ratpack.groovy.server.GroovyRatpackServerSpec;
-import ratpack.handling.Handler;
+import ratpack.server.core.handling.Handler;
 import ratpack.exec.registry.Registry;
-import ratpack.server.RatpackServerSpec;
-import ratpack.server.ServerConfig;
-import ratpack.server.ServerConfigBuilder;
+import ratpack.server.core.RatpackServerSpec;
+import ratpack.server.core.ServerConfig;
+import ratpack.server.core.ServerConfigBuilder;
 
 public class DefaultGroovyRatpackServerSpec implements GroovyRatpackServerSpec {
 

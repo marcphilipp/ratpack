@@ -19,12 +19,12 @@ package ratpack.site
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.inject.Provides
 import groovy.util.logging.Slf4j
-import ratpack.file.internal.FileSystemChecksumServices
+import ratpack.server.core.file.internal.FileSystemChecksumServices
 import ratpack.groovy.template.MarkupTemplate
 import ratpack.guice.ConfigurableModule
-import ratpack.http.client.HttpClient
-import ratpack.render.RenderableDecorator
-import ratpack.server.ServerConfig
+import ratpack.server.core.http.client.HttpClient
+import ratpack.server.core.render.RenderableDecorator
+import ratpack.server.core.ServerConfig
 import ratpack.site.github.*
 
 import javax.inject.Provider

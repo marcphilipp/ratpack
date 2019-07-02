@@ -25,7 +25,7 @@ import com.google.inject.Provides;
 import ratpack.config.ConfigObject;
 import ratpack.func.Action;
 import ratpack.func.Factory;
-import ratpack.server.ServerConfig;
+import ratpack.server.core.ServerConfig;
 import ratpack.func.util.Exceptions;
 import ratpack.func.util.Types;
 
@@ -220,7 +220,7 @@ public abstract class ConfigurableModule<T> extends AbstractModule {
    * Sets the config object for this module.  This overrides the default config object that would be created otherwise.
    *
    * @param config the config object
-   * @see #createConfig(ratpack.server.ServerConfig)
+   * @see #createConfig(ServerConfig)
    */
   public void setConfig(T config) {
     this.config = config;

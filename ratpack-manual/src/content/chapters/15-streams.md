@@ -38,6 +38,6 @@ Ratpack supports [server-sent events](https://developer.mozilla.org/en-US/docs/S
 
 ## Websockets
 
-Ratpack supports streaming data over [websockets](http://en.wikipedia.org/wiki/WebSocket) by way of the [`WebSockets.websocketBroadcast()`](api/ratpack/websocket/WebSockets.html#websocketBroadcast-ratpack.handling.Context-org.reactivestreams.Publisher-) method.
+Ratpack supports streaming data over [websockets](http://en.wikipedia.org/wiki/WebSocket) by way of the [`WebSockets.websocketBroadcast()`](api/ratpack/websocket/WebSockets.html#websocketBroadcast-Context-org.reactivestreams.Publisher-) method.
  
 Ratpack also supports bidirectional websocket communication via the other websocket-opening methods of the [`WebSockets`](api/ratpack/websocket/WebSockets.html) class.   

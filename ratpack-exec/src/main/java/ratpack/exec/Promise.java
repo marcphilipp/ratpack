@@ -362,7 +362,7 @@ public interface Promise<T> {
    * Specifies the action to take if the an error of the given type occurs trying to produce the promised value.
    *
    * <pre class="java">{@code
-   * import ratpack.http.TypedData;
+   * import ratpack.server.core.http.TypedData;
    * import ratpack.test.embed.EmbeddedApp;
    *
    * import static org.junit.Assert.assertEquals;
@@ -1418,7 +1418,7 @@ public interface Promise<T> {
    * It can be useful at the handler layer to provide common validation.
    * <pre class="java">{@code
    * import ratpack.exec.Promise;
-   * import ratpack.handling.Context;
+   * import ratpack.server.core.handling.Context;
    * import ratpack.test.embed.EmbeddedApp;
    *
    * import static org.junit.Assert.assertEquals;

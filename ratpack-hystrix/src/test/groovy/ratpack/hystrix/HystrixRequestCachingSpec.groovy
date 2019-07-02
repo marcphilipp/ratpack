@@ -20,12 +20,12 @@ import com.google.inject.Inject
 import com.netflix.hystrix.HystrixCommand
 import com.netflix.hystrix.HystrixCommandGroupKey
 import com.netflix.hystrix.HystrixObservableCommand
-import ratpack.error.ServerErrorHandler
+import ratpack.server.core.error.ServerErrorHandler
 import ratpack.exec.Blocking
-import ratpack.handling.Context
+import ratpack.server.core.handling.Context
 import ratpack.http.client.BaseHttpClientSpec
-import ratpack.http.client.HttpClient
-import ratpack.http.client.ReceivedResponse
+import ratpack.server.core.http.client.HttpClient
+import ratpack.server.core.http.client.ReceivedResponse
 import ratpack.rx.RxRatpack
 import rx.Observable
 

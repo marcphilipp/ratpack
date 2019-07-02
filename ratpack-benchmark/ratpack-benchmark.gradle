@@ -20,7 +20,7 @@ plugins {
 }
 
 dependencies {
-  compile project(":ratpack-core")
+  compile project(":ratpack-server-core")
 }
 
 description = "JMH project for writing micro benchmarks for any ratpack module."

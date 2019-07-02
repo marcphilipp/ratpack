@@ -16,8 +16,8 @@
 
 package ratpack.http.client
 
-import ratpack.error.ServerErrorHandler
-import ratpack.error.internal.DefaultDevelopmentErrorHandler
+import ratpack.server.core.error.ServerErrorHandler
+import ratpack.server.core.error.internal.DefaultDevelopmentErrorHandler
 import ratpack.groovy.handling.GroovyChain
 import ratpack.groovy.test.embed.GroovyEmbeddedApp
 import ratpack.test.embed.EmbeddedApp

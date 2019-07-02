@@ -16,10 +16,10 @@
 
 package ratpack.config
 
-import ratpack.server.ServerConfig
-import ratpack.server.internal.DefaultServerConfigBuilder
-import ratpack.server.internal.ServerEnvironment
-import ratpack.impose.Impositions
+import ratpack.server.core.ServerConfig
+import ratpack.server.core.internal.DefaultServerConfigBuilder
+import ratpack.server.core.internal.ServerEnvironment
+import ratpack.server.core.impose.Impositions
 
 class PropsConfigSpec extends BaseConfigSpec {
   def "supports properties"() {

@@ -15,7 +15,7 @@
  */
 
 include \
-    "ratpack-core",
+    "ratpack-server-core",
     "ratpack-manual",
     "ratpack-site",
     "ratpack-test",

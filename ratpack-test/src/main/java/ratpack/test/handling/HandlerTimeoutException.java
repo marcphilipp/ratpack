@@ -19,7 +19,7 @@ package ratpack.test.handling;
 /**
  * Thrown when a handler under test takes too long to produce a result.
  *
- * @see RequestFixture#handle(ratpack.handling.Handler)
+ * @see RequestFixture#handle(ratpack.server.core.handling.Handler)
  */
 public class HandlerTimeoutException extends RuntimeException {
 

@@ -20,8 +20,8 @@ import groovy.transform.CompileStatic
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
-import ratpack.http.MediaType
-import ratpack.http.internal.DefaultMediaType
+import ratpack.server.core.http.MediaType
+import ratpack.server.core.http.internal.DefaultMediaType
 
 import javax.net.ssl.*
 import java.security.SecureRandom

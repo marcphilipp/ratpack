@@ -62,7 +62,7 @@ class RatpackPlugin implements Plugin<Project> {
     }
 
     project.dependencies {
-      compile ratpackExtension.core
+      compile ratpackExtension.serverCore
       testCompile ratpackExtension.test
     }
 

@@ -61,8 +61,8 @@ This implementation logs to an slf4j logger named `ratpack.requests`
 (the [`RequestLogger.ncsa(Logger)`](api/ratpack/handling/RequestLogger.html#ncsa-org.slf4j.Logger-) method allows an alternative logger to be specified).  
 
 ```language-java
-import ratpack.handling.RequestLogger;
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.handling.RequestLogger;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 import static org.junit.Assert.*;
 

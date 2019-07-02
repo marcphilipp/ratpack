@@ -5,7 +5,7 @@ The [`Context`](api/ratpack/handling/Context.html) type is at the core of Ratpac
 It provides:
 
 * Access the HTTP [`Request`](api/ratpack/http/Request.html) and [`Response`](api/ratpack/http/Response.html)
-* Delegation and flow control (via the [`next()`](api/ratpack/handling/Context.html#next--) and [`insert()`](api/ratpack/handling/Context.html#insert-ratpack.handling.Handler...-) methods)
+* Delegation and flow control (via the [`next()`](api/ratpack/handling/Context.html#next--) and [`insert()`](api/ratpack/handling/Context.html#insert-Handler...-) methods)
 * Access to _contextual objects_
 * Convenience for common handler operations
 
@@ -129,14 +129,14 @@ In the case where a file cannot be resolved from within the application's root, 
 The context object mechanism supports partitioning application logic by providing different objects to different partitions.
 This is because objects registered with context are implicitly scoped, depending on how they were registered.
 Objects registered with the [`next()`](api/ratpack/handling/Context.html#next-ratpack.exec.registry.Registry-) methods are available to all downstream handlers that
-were part of the same insertion (i.e. [`context.insert()`](api/ratpack/handling/Context.html#insert-ratpack.handling.Handler...-) including and nested insertions.
-Objects registered with the [`insert()`](api/ratpack/handling/Context.html#insert-ratpack.exec.registry.Registry-ratpack.handling.Handler...-) methods are available to the inserted handlers and
+were part of the same insertion (i.e. [`context.insert()`](api/ratpack/handling/Context.html#insert-Handler...-) including and nested insertions.
+Objects registered with the [`insert()`](api/ratpack/handling/Context.html#insert-ratpack.exec.registry.Registry-Handler...-) methods are available to the inserted handlers and
 nested insertions.
 
 A typical use for this is using different error handling strategies for different parts of your application.
 
 ```language-java
-import ratpack.error.ServerErrorHandler;
+import ratpack.server.core.error.ServerErrorHandler;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;

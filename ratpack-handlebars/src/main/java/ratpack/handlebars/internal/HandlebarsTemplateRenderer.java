@@ -17,10 +17,10 @@
 package ratpack.handlebars.internal;
 
 import com.github.jknack.handlebars.Handlebars;
-import ratpack.file.MimeTypes;
+import ratpack.server.core.file.MimeTypes;
 import ratpack.handlebars.Template;
-import ratpack.handling.Context;
-import ratpack.render.RendererSupport;
+import ratpack.server.core.handling.Context;
+import ratpack.server.core.render.RendererSupport;
 
 import javax.inject.Inject;
 import java.io.IOException;

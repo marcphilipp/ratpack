@@ -27,7 +27,7 @@ import ratpack.func.Action
 import ratpack.groovy.internal.ClosureUtil
 import ratpack.exec.registry.Registry
 import ratpack.exec.registry.RegistrySpec
-import ratpack.server.ServerConfig
+import ratpack.server.core.ServerConfig
 import ratpack.test.internal.registry.RegistryContractSpec
 
 class GuiceRegistrySpec extends RegistryContractSpec {

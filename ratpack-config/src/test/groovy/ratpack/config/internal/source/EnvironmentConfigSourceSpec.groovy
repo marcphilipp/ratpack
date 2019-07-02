@@ -19,7 +19,7 @@ package ratpack.config.internal.source
 import com.fasterxml.jackson.databind.node.ObjectNode
 import ratpack.config.internal.DefaultConfigDataBuilder
 import ratpack.func.util.FileSystemBinding
-import ratpack.server.internal.ServerEnvironment
+import ratpack.server.core.internal.ServerEnvironment
 import spock.lang.Specification
 
 import static ratpack.config.ConfigDataBuilder.DEFAULT_ENV_PREFIX

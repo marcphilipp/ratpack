@@ -30,7 +30,7 @@ class FailsToStartSpec extends FunctionalSpec {
     file("src/main/java/org/Main.java") << """
       package org;
 
-      import ratpack.server.*;
+      import ratpack.server.core.*;
 
       public class Main {
         public static void main(String... args) throws Exception {

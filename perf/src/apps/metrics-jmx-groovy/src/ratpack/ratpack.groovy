@@ -4,7 +4,7 @@ import ratpack.codahale.metrics.CodaHaleMetricsModule
 import ratpack.dropwizard.metrics.DropwizardMetricsModule
 <% } %>
 import ratpack.perf.incl.*
-import ratpack.handling.ResponseTimer
+import ratpack.server.core.handling.ResponseTimer
 
 import static ratpack.groovy.Groovy.*
 

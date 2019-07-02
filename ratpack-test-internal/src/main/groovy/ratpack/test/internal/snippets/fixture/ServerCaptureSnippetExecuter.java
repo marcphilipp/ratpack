@@ -16,12 +16,12 @@
 
 package ratpack.test.internal.snippets.fixture;
 
-import ratpack.impose.ForceServerListenPortImposition;
-import ratpack.impose.Impositions;
+import ratpack.server.core.impose.ForceServerListenPortImposition;
+import ratpack.server.core.impose.Impositions;
 import ratpack.test.internal.snippets.TestCodeSnippet;
 import ratpack.test.internal.snippets.executer.SnippetExecuter;
-import ratpack.server.RatpackServer;
-import ratpack.server.internal.ServerCapturer;
+import ratpack.server.core.RatpackServer;
+import ratpack.server.core.internal.ServerCapturer;
 
 public abstract class ServerCaptureSnippetExecuter implements SnippetExecuter {
 

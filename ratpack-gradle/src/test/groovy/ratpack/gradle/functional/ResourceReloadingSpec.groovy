@@ -31,8 +31,8 @@ class ResourceReloadingSpec extends FunctionalSpec {
 
     file("src/ratpack/ratpack.groovy") << """
       import static ratpack.groovy.Groovy.*
-      import ratpack.server.Stopper
-      import ratpack.server.RatpackServer
+      import ratpack.server.core.Stopper
+      import ratpack.server.core.RatpackServer
 
       ratpack {
         serverConfig { port 0 }

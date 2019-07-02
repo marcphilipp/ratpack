@@ -28,8 +28,8 @@ import ratpack.func.Action;
 import ratpack.guice.BindingsSpec;
 import ratpack.guice.ConfigurableModule;
 import ratpack.guice.RequestScoped;
-import ratpack.http.Request;
-import ratpack.http.Response;
+import ratpack.server.core.http.Request;
+import ratpack.server.core.http.Response;
 import ratpack.session.internal.*;
 import ratpack.func.util.Types;
 
@@ -70,7 +70,7 @@ import java.util.function.Consumer;
  * <h3>Example usage</h3>
  * <pre class="java">{@code
  * import ratpack.guice.Guice;
- * import ratpack.path.PathTokens;
+ * import ratpack.server.core.path.PathTokens;
  * import ratpack.session.Session;
  * import ratpack.session.SessionModule;
  * import ratpack.test.embed.EmbeddedApp;

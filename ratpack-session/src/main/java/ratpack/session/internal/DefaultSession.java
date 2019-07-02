@@ -28,7 +28,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ratpack.exec.Operation;
 import ratpack.exec.Promise;
-import ratpack.http.Response;
+import ratpack.server.core.http.Response;
 import ratpack.session.*;
 import ratpack.func.util.Types;
 

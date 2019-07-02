@@ -35,10 +35,10 @@ import io.prometheus.client.CollectorRegistry;
 import io.prometheus.client.dropwizard.DropwizardExports;
 import ratpack.dropwizard.metrics.internal.*;
 import ratpack.guice.ConfigurableModule;
-import ratpack.handling.HandlerDecorator;
-import ratpack.service.Service;
-import ratpack.service.StartEvent;
-import ratpack.service.StopEvent;
+import ratpack.server.core.handling.HandlerDecorator;
+import ratpack.server.core.service.Service;
+import ratpack.server.core.service.StartEvent;
+import ratpack.server.core.service.StopEvent;
 
 import javax.inject.Inject;
 

@@ -10,8 +10,8 @@ You write your own main class that uses this API to launch the application.
 ```language-java hello-world
 package my.app;
 
-import ratpack.server.RatpackServer;
-import ratpack.server.ServerConfig;
+import ratpack.server.core.RatpackServer;
+import ratpack.server.core.ServerConfig;
 import java.net.URI;
 
 public class Main {
@@ -62,7 +62,7 @@ The file may be within a JAR that is on the classpath, or within a directory tha
 The following example demonstrates using `BaseDir.find()` to discover the base dir from the classpath.
 
 ```language-java
-import ratpack.server.ServerConfig;
+import ratpack.server.core.ServerConfig;
 import ratpack.test.embed.EphemeralBaseDir;
 import ratpack.test.embed.EmbeddedApp;
 

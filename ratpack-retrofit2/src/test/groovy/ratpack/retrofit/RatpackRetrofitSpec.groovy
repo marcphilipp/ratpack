@@ -17,15 +17,15 @@
 package ratpack.retrofit
 
 import io.netty.buffer.UnpooledByteBufAllocator
-import ratpack.error.ServerErrorHandler
-import ratpack.error.internal.DefaultDevelopmentErrorHandler
+import ratpack.server.core.error.ServerErrorHandler
+import ratpack.server.core.error.internal.DefaultDevelopmentErrorHandler
 import ratpack.exec.Promise
 import ratpack.groovy.test.embed.GroovyEmbeddedApp
-import ratpack.handling.Context
-import ratpack.http.client.HttpClient
-import ratpack.http.client.ReceivedResponse
+import ratpack.server.core.handling.Context
+import ratpack.server.core.http.client.HttpClient
+import ratpack.server.core.http.client.ReceivedResponse
 import ratpack.exec.registry.RegistrySpec
-import ratpack.server.ServerConfig
+import ratpack.server.core.ServerConfig
 import ratpack.test.embed.EmbeddedApp
 import ratpack.test.exec.ExecHarness
 import retrofit2.Response
@@ -297,9 +297,9 @@ class RatpackRetrofitSpec extends Specification {
     then:
     def e = thrown(IOException)
     if (readTimeout != null) {
-      assert e.message == "ratpack.http.client.HttpClientReadTimeoutException: Read timeout (PT1S) waiting on HTTP server at $otherApp.address"
+      assert e.message == "ratpack.server.core.http.client.HttpClientReadTimeoutException: Read timeout (PT1S) waiting on HTTP server at $otherApp.address"
     } else {
-      assert e.message == "ratpack.http.client.HttpClientReadTimeoutException: Read timeout (PT3S) waiting on HTTP server at $otherApp.address"
+      assert e.message == "ratpack.server.core.http.client.HttpClientReadTimeoutException: Read timeout (PT3S) waiting on HTTP server at $otherApp.address"
     }
     where:
     readTimeout << [1000, null]

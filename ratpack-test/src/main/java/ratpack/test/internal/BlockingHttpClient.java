@@ -22,12 +22,12 @@ import ratpack.exec.ExecController;
 import ratpack.exec.ExecResult;
 import ratpack.exec.Result;
 import ratpack.func.Action;
-import ratpack.http.TypedData;
-import ratpack.http.client.HttpClient;
-import ratpack.http.client.ReceivedResponse;
-import ratpack.http.client.RequestSpec;
-import ratpack.http.client.internal.DefaultReceivedResponse;
-import ratpack.http.internal.ByteBufBackedTypedData;
+import ratpack.server.core.http.TypedData;
+import ratpack.server.core.http.client.HttpClient;
+import ratpack.server.core.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.RequestSpec;
+import ratpack.server.core.http.client.internal.DefaultReceivedResponse;
+import ratpack.server.core.http.internal.ByteBufBackedTypedData;
 import ratpack.func.util.Exceptions;
 
 import java.net.URI;

@@ -45,7 +45,7 @@ jobs:
 
       - run:
           name: Test & Build
-          command: ./gradlew :ratpack-gradle:check :ratpack-site:check :ratpack-core:check build jacocoReport --continue --max-workers=2 -PpublishToSlack
+          command: ./gradlew :ratpack-gradle:check :ratpack-site:check :ratpack-server-core:check build jacocoReport --continue --max-workers=2 -PpublishToSlack
 
       - run:
           name: Save test results

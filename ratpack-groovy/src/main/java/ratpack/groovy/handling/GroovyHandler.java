@@ -16,8 +16,8 @@
 
 package ratpack.groovy.handling;
 
-import ratpack.handling.Context;
-import ratpack.handling.Handler;
+import ratpack.server.core.handling.Context;
+import ratpack.server.core.handling.Handler;
 
 /**
  * A handler subclass that makes a {@link GroovyContext} available.

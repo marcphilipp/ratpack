@@ -16,9 +16,9 @@
 
 package ratpack.config
 
-import ratpack.impose.Impositions
-import ratpack.server.internal.DefaultServerConfigBuilder
-import ratpack.server.internal.ServerEnvironment
+import ratpack.server.core.impose.Impositions
+import ratpack.server.core.internal.DefaultServerConfigBuilder
+import ratpack.server.core.internal.ServerEnvironment
 
 class EnvVarConfigSpec extends BaseConfigSpec {
 

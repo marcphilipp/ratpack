@@ -25,8 +25,8 @@ import io.netty.util.AsciiString;
 import ratpack.exec.Execution;
 import ratpack.exec.Operation;
 import ratpack.exec.Promise;
-import ratpack.service.StartEvent;
-import ratpack.service.StopEvent;
+import ratpack.server.core.service.StartEvent;
+import ratpack.server.core.service.StopEvent;
 import ratpack.session.SessionStore;
 import ratpack.session.store.RedisSessionModule;
 

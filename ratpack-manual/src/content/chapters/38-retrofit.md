@@ -84,7 +84,7 @@ The following example shows the 3 variations configured for the same endpoint.
 
 ```language-java
 import ratpack.exec.Promise;
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import retrofit2.Response;
 import retrofit2.http.GET;
 
@@ -173,7 +173,7 @@ import retrofit2.Retrofit;
 
 import java.util.List;
 
-import static ratpack.jackson.Jackson.json;
+import static ratpack.server.core.jackson.Jackson.json;
 import static org.junit.Assert.*;
 
   

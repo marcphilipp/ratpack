@@ -22,7 +22,7 @@ import io.netty.buffer.Unpooled;
 import io.netty.util.AsciiString;
 import ratpack.exec.Operation;
 import ratpack.exec.Promise;
-import ratpack.service.StopEvent;
+import ratpack.server.core.service.StopEvent;
 import ratpack.session.SessionStore;
 
 import java.util.concurrent.atomic.AtomicLong;

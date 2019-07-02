@@ -19,11 +19,12 @@ package ratpack.hystrix;
 import com.netflix.hystrix.HystrixThreadPoolMetrics;
 import org.reactivestreams.Publisher;
 import ratpack.func.Predicate;
-import ratpack.handling.Context;
-import ratpack.handling.Handler;
+import ratpack.server.core.handling.Context;
+import ratpack.server.core.handling.Handler;
 import ratpack.hystrix.internal.*;
+import ratpack.server.core.sse.ServerSentEvents;
 
-import static ratpack.sse.ServerSentEvents.serverSentEvents;
+import static ratpack.server.core.sse.ServerSentEvents.serverSentEvents;
 import static ratpack.exec.stream.Streams.fanOut;
 import static ratpack.exec.stream.Streams.merge;
 
@@ -35,7 +36,7 @@ import static ratpack.exec.stream.Streams.merge;
  * import ratpack.hystrix.HystrixMetricsEventStreamHandler;
  * import static org.junit.Assert.*;
  *
- * assertTrue(chain instanceof ratpack.handling.Chain);
+ * assertTrue(chain instanceof Chain);
  * chain.get("admin/hystrix.stream", new HystrixMetricsEventStreamHandler());
  * </pre>
  * <p>
@@ -45,7 +46,7 @@ import static ratpack.exec.stream.Streams.merge;
  * application in realtime.
  *
  * @see <a href="https://github.com/Netflix/Hystrix/wiki" target="_blank">Hystrix</a>
- * @see ratpack.sse.ServerSentEvents
+ * @see ServerSentEvents
  */
 public class HystrixMetricsEventStreamHandler implements Handler {
 

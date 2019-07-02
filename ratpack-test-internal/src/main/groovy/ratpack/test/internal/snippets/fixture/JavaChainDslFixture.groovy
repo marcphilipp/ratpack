@@ -22,11 +22,11 @@ class JavaChainDslFixture extends SnippetFixture {
   String pre() {
     """
 import ratpack.func.Action;
-import ratpack.server.ServerConfig;
-import ratpack.handling.Chain;
-import ratpack.handling.Handler;
-import ratpack.handling.Context;
-import ratpack.handling.internal.DefaultChain;
+import ratpack.server.core.ServerConfig;
+import ratpack.server.core.handling.Chain;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.handling.Context;
+import ratpack.server.core.handling.internal.DefaultChain;
 import com.google.common.collect.Lists;
 import java.util.List;
 

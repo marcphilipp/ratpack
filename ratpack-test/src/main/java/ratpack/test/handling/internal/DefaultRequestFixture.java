@@ -24,31 +24,31 @@ import io.netty.handler.codec.http.HttpHeaderNames;
 import io.netty.handler.codec.http.HttpMethod;
 import io.netty.handler.codec.http.HttpVersion;
 import io.netty.util.CharsetUtil;
-import ratpack.error.ClientErrorHandler;
-import ratpack.error.ServerErrorHandler;
+import ratpack.server.core.error.ClientErrorHandler;
+import ratpack.server.core.error.ServerErrorHandler;
 import ratpack.exec.ExecController;
 import ratpack.exec.Promise;
 import ratpack.exec.internal.DefaultExecController;
 import ratpack.func.Action;
 import ratpack.func.Block;
-import ratpack.handling.Chain;
-import ratpack.handling.Handler;
-import ratpack.handling.Handlers;
-import ratpack.http.MutableHeaders;
-import ratpack.http.internal.DefaultRequest;
-import ratpack.http.internal.NettyHeadersBackedMutableHeaders;
-import ratpack.impose.Impositions;
-import ratpack.path.internal.DefaultPathBinding;
-import ratpack.path.internal.PathBindingStorage;
-import ratpack.path.internal.RootPathBinding;
+import ratpack.server.core.handling.Chain;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.handling.Handlers;
+import ratpack.server.core.http.MutableHeaders;
+import ratpack.server.core.http.internal.DefaultRequest;
+import ratpack.server.core.http.internal.NettyHeadersBackedMutableHeaders;
+import ratpack.server.core.impose.Impositions;
+import ratpack.server.core.path.internal.DefaultPathBinding;
+import ratpack.server.core.path.internal.PathBindingStorage;
+import ratpack.server.core.path.internal.RootPathBinding;
 import ratpack.exec.registry.Registry;
 import ratpack.exec.registry.RegistryBuilder;
 import ratpack.exec.registry.RegistrySpec;
-import ratpack.server.RatpackServer;
-import ratpack.server.ServerConfig;
-import ratpack.server.ServerConfigBuilder;
-import ratpack.server.internal.RequestBodyReader;
-import ratpack.server.internal.ServerRegistry;
+import ratpack.server.core.RatpackServer;
+import ratpack.server.core.ServerConfig;
+import ratpack.server.core.ServerConfigBuilder;
+import ratpack.server.core.internal.RequestBodyReader;
+import ratpack.server.core.internal.ServerRegistry;
 import ratpack.exec.stream.Streams;
 import ratpack.exec.stream.TransformablePublisher;
 import ratpack.test.handling.HandlerTimeoutException;
@@ -69,7 +69,7 @@ import static io.netty.buffer.Unpooled.buffer;
 import static io.netty.buffer.Unpooled.unreleasableBuffer;
 
 /**
- * @see ratpack.test.handling.RequestFixture#handle(ratpack.handling.Handler, ratpack.func.Action)
+ * @see ratpack.test.handling.RequestFixture#handle(Handler, ratpack.func.Action)
  */
 @SuppressWarnings("UnusedDeclaration")
 public class DefaultRequestFixture implements RequestFixture {

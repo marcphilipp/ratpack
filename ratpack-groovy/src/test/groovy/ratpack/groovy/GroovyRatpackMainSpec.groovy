@@ -34,7 +34,7 @@ class GroovyRatpackMainSpec extends Specification {
     this.class.classLoader
     ratpackFile << """
       import static ratpack.groovy.Groovy.*
-      import ratpack.server.Stopper
+      import ratpack.server.core.Stopper
 
       ratpack {
         handlers {
@@ -42,7 +42,7 @@ class GroovyRatpackMainSpec extends Specification {
             render "foo"
           }
           get("stop") {
-            get(ratpack.server.Stopper).stop()
+            get(ratpack.server.core.Stopper).stop()
           }
         }
       }

@@ -22,11 +22,11 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import ratpack.dropwizard.metrics.DropwizardMetricsConfig;
 import ratpack.exec.ExecController;
-import ratpack.http.client.HttpClient;
-import ratpack.http.client.internal.DefaultHttpClient;
-import ratpack.http.client.internal.HttpClientStats;
-import ratpack.service.Service;
-import ratpack.service.StartEvent;
+import ratpack.server.core.http.client.HttpClient;
+import ratpack.server.core.http.client.internal.DefaultHttpClient;
+import ratpack.server.core.http.client.internal.HttpClientStats;
+import ratpack.server.core.service.Service;
+import ratpack.server.core.service.StartEvent;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;

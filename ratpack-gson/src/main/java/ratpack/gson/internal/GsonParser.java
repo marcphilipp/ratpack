@@ -20,11 +20,11 @@ import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import ratpack.func.api.Nullable;
 import ratpack.gson.GsonParseOpts;
-import ratpack.handling.Context;
-import ratpack.http.TypedData;
-import ratpack.parse.Parse;
-import ratpack.parse.Parser;
-import ratpack.parse.ParserSupport;
+import ratpack.server.core.handling.Context;
+import ratpack.server.core.http.TypedData;
+import ratpack.server.core.parse.Parse;
+import ratpack.server.core.parse.Parser;
+import ratpack.server.core.parse.ParserSupport;
 import ratpack.func.util.Types;
 
 import java.io.BufferedReader;

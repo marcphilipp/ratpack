@@ -17,8 +17,10 @@
 package ratpack.hikari;
 
 import com.zaxxer.hikari.HikariDataSource;
+import ratpack.server.core.service.Service;
+import ratpack.server.core.service.StopEvent;
 
-public class HikariService implements ratpack.service.Service {
+public class HikariService implements Service {
 
   private final HikariDataSource dataSource;
 
@@ -31,7 +33,7 @@ public class HikariService implements ratpack.service.Service {
   }
 
   @Override
-  public void onStop(ratpack.service.StopEvent event) throws Exception {
+  public void onStop(StopEvent event) throws Exception {
     dataSource.close();
   }
 }

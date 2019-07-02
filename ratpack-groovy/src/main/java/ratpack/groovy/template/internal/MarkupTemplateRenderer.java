@@ -22,10 +22,10 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.ByteBufOutputStream;
 import io.netty.util.CharsetUtil;
-import ratpack.file.MimeTypes;
+import ratpack.server.core.file.MimeTypes;
 import ratpack.groovy.template.MarkupTemplate;
-import ratpack.handling.Context;
-import ratpack.render.RendererSupport;
+import ratpack.server.core.handling.Context;
+import ratpack.server.core.render.RendererSupport;
 
 import javax.inject.Inject;
 import java.io.IOException;

@@ -44,8 +44,8 @@ import java.util.Properties;
  * import java.nio.file.Files;
  * import java.nio.file.Path;
  * import ratpack.func.Action;
- * import ratpack.server.RatpackServer;
- * import ratpack.server.ServerConfig;
+ * import ratpack.server.core.RatpackServer;
+ * import ratpack.server.core.ServerConfig;
  * import ratpack.test.ServerBackedApplicationUnderTest;
  * import ratpack.test.http.TestHttpClient;
  *
@@ -262,7 +262,7 @@ public interface ConfigDataBuilder {
    * <pre class="java">{@code
    * import com.google.common.collect.ImmutableMap;
    * import ratpack.config.ConfigData;
-   * import ratpack.server.ServerConfig;
+   * import ratpack.server.core.ServerConfig;
    * import static org.junit.Assert.*;
    *
    * public class Example {

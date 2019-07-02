@@ -23,9 +23,9 @@ import java.lang.reflect.Proxy;
 
 public class RatpackServerProxy {
 
-  public static final String CAPTURER_CLASS_NAME = "ratpack.server.internal.ServerCapturer";
+  public static final String CAPTURER_CLASS_NAME = "ratpack.server.core.internal.ServerCapturer";
   public static final String BLOCK_CLASS_NAME = "ratpack.func.Block";
-  public static final String SERVER_CLASS_NAME = "ratpack.server.internal.DefaultRatpackServer";
+  public static final String SERVER_CLASS_NAME = "ratpack.server.core.internal.DefaultRatpackServer";
   private final Object server;
 
   public RatpackServerProxy(Object server) {

@@ -18,7 +18,7 @@ package ratpack.config.server
 
 import com.google.common.io.ByteSource
 import ratpack.config.ConfigData
-import ratpack.server.ServerConfig
+import ratpack.server.core.ServerConfig
 import spock.lang.Specification
 
 import java.nio.file.Path

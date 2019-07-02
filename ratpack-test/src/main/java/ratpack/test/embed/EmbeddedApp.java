@@ -20,15 +20,15 @@ import org.slf4j.LoggerFactory;
 import ratpack.func.Action;
 import ratpack.func.Factory;
 import ratpack.func.Function;
-import ratpack.handling.Chain;
-import ratpack.handling.Handler;
-import ratpack.handling.Handlers;
+import ratpack.server.core.RatpackServer;
+import ratpack.server.core.handling.Chain;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.handling.Handlers;
 import ratpack.exec.registry.Registry;
-import ratpack.server.RatpackServer;
-import ratpack.server.RatpackServerSpec;
-import ratpack.server.ServerConfig;
-import ratpack.server.ServerConfigBuilder;
-import ratpack.server.internal.EmbeddedRatpackServerSpec;
+import ratpack.server.core.RatpackServerSpec;
+import ratpack.server.core.ServerConfig;
+import ratpack.server.core.ServerConfigBuilder;
+import ratpack.server.core.internal.EmbeddedRatpackServerSpec;
 import ratpack.test.CloseableApplicationUnderTest;
 import ratpack.test.embed.internal.EmbeddedAppSupport;
 
@@ -66,7 +66,7 @@ public interface EmbeddedApp extends CloseableApplicationUnderTest {
    * @param definition a function that defines the server
    * @return a newly created embedded application
    * @throws java.lang.Exception if an error is encountered creating the application
-   * @see ratpack.server.RatpackServer#of(Action)
+   * @see RatpackServer#of(Action)
    */
   static EmbeddedApp of(Action<? super RatpackServerSpec> definition) throws Exception {
     return fromServer(RatpackServer.of(d -> definition.execute(new EmbeddedRatpackServerSpec(d))));

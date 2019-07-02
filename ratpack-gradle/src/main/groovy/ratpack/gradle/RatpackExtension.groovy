@@ -34,8 +34,8 @@ class RatpackExtension {
     baseDir = project.file('src/ratpack')
   }
 
-  Dependency getCore() {
-    dependency("core")
+  Dependency getServerCore() {
+    dependency("server-core")
   }
 
   Dependency getGroovy() {

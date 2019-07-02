@@ -92,7 +92,7 @@ Create the file `src/main/java/my/app/Main.java`, with the following content:
 ```language-java hello-world
 package my.app;
 
-import ratpack.server.RatpackServer;
+import ratpack.server.core.RatpackServer;
 
 public class Main {
   public static void main(String... args) throws Exception {

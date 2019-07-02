@@ -20,7 +20,7 @@ apply from: "$rootDir/gradle/javaModule.gradle"
 apply from: "$rootDir/gradle/versionFile.gradle"
 
 dependencies {
-  compile project(":ratpack-core")
+  compile project(":ratpack-server-core")
   compile commonDependencies.guice
   compile 'com.fizzed:rocker-runtime:0.18.0', {
     exclude group: "org.slf4j", module: "slf4j-api"

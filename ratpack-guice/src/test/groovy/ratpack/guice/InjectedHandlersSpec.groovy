@@ -17,8 +17,8 @@
 package ratpack.guice
 
 import com.google.inject.AbstractModule
-import ratpack.handling.Context
-import ratpack.handling.Handler
+import ratpack.server.core.handling.Context
+import ratpack.server.core.handling.Handler
 import ratpack.test.internal.RatpackGroovyDslSpec
 
 import javax.inject.Inject

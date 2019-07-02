@@ -18,8 +18,8 @@ package ratpack.config.server
 
 import org.junit.Rule
 import org.junit.rules.TemporaryFolder
-import ratpack.server.ServerConfig
-import ratpack.server.internal.ServerConfigData
+import ratpack.server.core.ServerConfig
+import ratpack.server.core.internal.ServerConfigData
 
 import java.nio.file.Path
 import java.security.KeyStore

@@ -20,9 +20,9 @@ import com.fasterxml.jackson.databind.ObjectReader
 import com.fasterxml.jackson.databind.node.ArrayNode
 import groovy.transform.CompileStatic
 import ratpack.exec.Promise
-import ratpack.http.client.HttpClient
-import ratpack.http.client.ReceivedResponse
-import ratpack.http.client.RequestSpec
+import ratpack.server.core.http.client.HttpClient
+import ratpack.server.core.http.client.ReceivedResponse
+import ratpack.server.core.http.client.RequestSpec
 import rx.Observable
 import rx.Subscriber
 

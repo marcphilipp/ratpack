@@ -16,7 +16,7 @@
 
 package ratpack.guice
 
-import ratpack.impose.Impositions
+import ratpack.server.core.impose.Impositions
 import ratpack.test.internal.RatpackGroovyDslSpec
 
 class ImposingBindingsSpec extends RatpackGroovyDslSpec {

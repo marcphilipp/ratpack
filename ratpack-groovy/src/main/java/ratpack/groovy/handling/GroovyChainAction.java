@@ -17,10 +17,10 @@
 package ratpack.groovy.handling;
 
 import ratpack.func.Action;
-import ratpack.handling.Chain;
-import ratpack.handling.Handler;
+import ratpack.server.core.handling.Chain;
+import ratpack.server.core.handling.Handler;
 import ratpack.exec.registry.Registry;
-import ratpack.server.ServerConfig;
+import ratpack.server.core.ServerConfig;
 
 /**
  * A convenience super class for a standalone implementation of a {@code Action<GroovyChain>}.

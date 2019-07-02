@@ -16,8 +16,8 @@
 
 package ratpack.config
 
-import ratpack.server.ServerConfig
-import ratpack.server.internal.ServerConfigData
+import ratpack.server.core.ServerConfig
+import ratpack.server.core.internal.ServerConfigData
 
 class YamlConfigSpec extends BaseConfigSpec {
   def "supports yaml"() {

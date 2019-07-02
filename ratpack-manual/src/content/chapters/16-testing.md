@@ -15,7 +15,7 @@ While Spock requires writing tests in Groovy, it can effortlessly be used to eff
 
 ### RequestFixture
 
-The [`RequestFixture`](api/ratpack/test/handling/RequestFixture.html#handle-ratpack.handling.Handler-ratpack.func.Action-) class
+The [`RequestFixture`](api/ratpack/test/handling/RequestFixture.html#handle-Handler-ratpack.func.Action-) class
 facilitates creating a mocked request environment, ostensibly for testing [`Handler`](api/ratpack/handling/Handler.html) implementations.
 However, it is also common to use an ad-hoc handler with a request fixture that integrates with other components (e.g. [`Parser`](api/ratpack/parse/Parser.html) implementations).
 
@@ -63,7 +63,7 @@ This can often be combined with the “after test” lifecycle event of the tes
 Ratpack provides a mechanism for augmenting applications under test for testability, known as [`impositions`](api/ratpack/impose/Impositions.html).
 
 Typically, impositions are specified by sub-classing [`MainClassApplicationUnderTest`](api/ratpack/test/MainClassApplicationUnderTest.html) or similar, and overriding the 
-[`addImpositions(ImpositionsSpec)`](api/ratpack/test/ServerBackedApplicationUnderTest.html#addImpositions-ratpack.impose.ImpositionsSpec-) method.
+[`addImpositions(ImpositionsSpec)`](api/ratpack/test/ServerBackedApplicationUnderTest.html#addImpositions-ImpositionsSpec-) method.
  
 ### Browser testing
 

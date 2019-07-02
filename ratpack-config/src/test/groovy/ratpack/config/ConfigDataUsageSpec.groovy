@@ -18,7 +18,7 @@ package ratpack.config
 
 import com.fasterxml.jackson.databind.JsonNode
 import ratpack.config.internal.DefaultConfigDataBuilder
-import ratpack.server.internal.ServerEnvironment
+import ratpack.server.core.internal.ServerEnvironment
 
 class ConfigDataUsageSpec extends BaseConfigSpec {
   def "can combine configuration from multiple sources"() {

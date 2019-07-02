@@ -23,6 +23,6 @@ ext.apiLinks = [
 ]
 
 dependencies {
-  compile project(":ratpack-core")
+  compile project(":ratpack-server-core")
   compile(commonDependencies.rxjava2)
 }

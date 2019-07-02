@@ -1,3 +1,0 @@
-moduleName=ratpack
-moduleVersion=
-extensionClasses=ratpack.exec.stream.Streams,ratpack.websocket.WebSockets

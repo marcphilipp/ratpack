@@ -22,11 +22,11 @@ import groovy.lang.DelegatesTo;
 import ratpack.func.Action;
 import ratpack.groovy.internal.ClosureUtil;
 import ratpack.groovy.test.handling.internal.DefaultGroovyRequestFixture;
-import ratpack.handling.Chain;
-import ratpack.handling.Handler;
+import ratpack.server.core.handling.Chain;
+import ratpack.server.core.handling.Handler;
 import ratpack.exec.registry.RegistryBuilder;
 import ratpack.exec.registry.RegistrySpec;
-import ratpack.server.ServerConfigBuilder;
+import ratpack.server.core.ServerConfigBuilder;
 import ratpack.test.handling.HandlingResult;
 import ratpack.test.handling.RequestFixture;
 import ratpack.test.http.MultipartFileSpec;
@@ -40,7 +40,7 @@ import java.util.Map;
 public interface GroovyRequestFixture extends RequestFixture {
 
   /**
-   * Unit test a {@link ratpack.handling.Handler}.
+   * Unit test a {@link Handler}.
    * <p>
    * Example:
    * <pre class="tested">

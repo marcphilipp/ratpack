@@ -17,18 +17,18 @@
 package ratpack.guice;
 
 import ratpack.func.Action;
-import ratpack.impose.Imposition;
-import ratpack.impose.Impositions;
+import ratpack.server.core.impose.Imposition;
+import ratpack.server.core.impose.Impositions;
 
 /**
  * An {@link Imposition imposition} of additional and overridden Guice bindings, used by {@link Guice#registry(Action)} and similar methods.
  * <p>
  * This is typically used to override bindings at test time.
  * <pre class="java">{@code
- * import ratpack.server.RatpackServer;
+ * import ratpack.server.core.RatpackServer;
  * import ratpack.guice.BindingsImposition;
  * import ratpack.guice.Guice;
- * import ratpack.impose.ImpositionsSpec;
+ * import ratpack.server.core.impose.ImpositionsSpec;
  * import ratpack.test.MainClassApplicationUnderTest;
  *
  * import static org.junit.Assert.assertEquals;

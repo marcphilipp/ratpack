@@ -31,9 +31,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import ratpack.groovy.template.TextTemplateModule;
-import ratpack.handling.Context;
-import ratpack.handling.Handler;
-import ratpack.server.RatpackServer;
+import ratpack.server.core.handling.Context;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.RatpackServer;
 import ratpack.spring.TemplateTests.Application;
 import ratpack.spring.config.EnableRatpack;
 import ratpack.spring.config.RatpackProperties;

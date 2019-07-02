@@ -16,9 +16,9 @@
 
 package ratpack.exec
 
-import ratpack.error.ServerErrorHandler
+import ratpack.server.core.error.ServerErrorHandler
 import ratpack.func.Block
-import ratpack.http.client.RequestSpec
+import ratpack.server.core.http.client.RequestSpec
 import ratpack.test.internal.RatpackGroovyDslSpec
 import ratpack.test.internal.SimpleErrorHandler
 

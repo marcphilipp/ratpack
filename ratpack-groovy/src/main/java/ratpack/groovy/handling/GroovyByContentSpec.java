@@ -20,9 +20,9 @@ import groovy.lang.Closure;
 import groovy.lang.DelegatesTo;
 import ratpack.func.Block;
 import ratpack.groovy.Groovy;
-import ratpack.handling.ByContentSpec;
-import ratpack.handling.ByMethodSpec;
-import ratpack.handling.Handler;
+import ratpack.server.core.handling.ByContentSpec;
+import ratpack.server.core.handling.ByMethodSpec;
+import ratpack.server.core.handling.Handler;
 
 /**
  * A Groovy oriented content negotiation handler builder.

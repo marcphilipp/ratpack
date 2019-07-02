@@ -20,6 +20,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.util.AsciiString;
 import ratpack.exec.Operation;
 import ratpack.exec.Promise;
+import ratpack.server.core.service.Service;
 
 /**
  * A persistent store of session data.
@@ -48,8 +49,8 @@ import ratpack.exec.Promise;
  * import ratpack.exec.Blocking;
  * import ratpack.guice.ConfigurableModule;
  * import ratpack.guice.Guice;
- * import ratpack.service.StartEvent;
- * import ratpack.service.StopEvent;
+ * import ratpack.server.core.service.StartEvent;
+ * import ratpack.server.core.service.StopEvent;
  * import ratpack.session.Session;
  * import ratpack.session.SessionModule;
  * import ratpack.session.SessionStore;
@@ -172,7 +173,7 @@ import ratpack.exec.Promise;
  * @see SessionModule
  */
 @SuppressWarnings("deprecation")
-public interface SessionStore extends ratpack.service.Service {
+public interface SessionStore extends Service {
 
   /**
    * Writes the session data for the given id.

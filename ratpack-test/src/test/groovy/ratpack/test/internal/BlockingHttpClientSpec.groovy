@@ -18,7 +18,7 @@ package ratpack.test.internal
 
 import ratpack.exec.ExecController
 import ratpack.exec.internal.DefaultExecController
-import ratpack.http.client.HttpClient
+import ratpack.server.core.http.client.HttpClient
 import spock.lang.AutoCleanup
 
 import java.time.Duration

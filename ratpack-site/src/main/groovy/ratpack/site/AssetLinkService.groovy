@@ -17,7 +17,7 @@
 package ratpack.site
 
 import asset.pipeline.AssetPipelineConfigHolder
-import ratpack.file.internal.FileSystemChecksumService
+import ratpack.server.core.file.internal.FileSystemChecksumService
 
 class AssetLinkService {
 

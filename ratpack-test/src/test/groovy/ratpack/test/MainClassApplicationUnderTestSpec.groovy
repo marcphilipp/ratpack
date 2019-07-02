@@ -16,10 +16,10 @@
 
 package ratpack.test
 
-import ratpack.impose.ImpositionsSpec
-import ratpack.impose.ServerConfigImposition
-import ratpack.server.RatpackServer
-import ratpack.server.ServerConfig
+import ratpack.server.core.impose.ImpositionsSpec
+import ratpack.server.core.impose.ServerConfigImposition
+import ratpack.server.core.RatpackServer
+import ratpack.server.core.ServerConfig
 import spock.lang.Specification
 
 class MainClassApplicationUnderTestSpec extends Specification {

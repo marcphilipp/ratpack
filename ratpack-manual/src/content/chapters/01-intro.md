@@ -9,7 +9,7 @@ To build Ratpack applications, you can use any JVM build tool.
 The Ratpack project provides specific support for [Gradle](http://www.gradle.org) through plugins, but any could be used.
 
 Ratpack is published as a set of library JARs.
-The `ratpack-core` library is the only strictly required library.
+The `ratpack-server-core` library is the only strictly required library.
 Others such as `ratpack-groovy`, `ratpack-guice`, `ratpack-jackson`, `ratpack-test` etc. are optional.
 
 ## Goals

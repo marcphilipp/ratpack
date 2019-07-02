@@ -1,0 +1,3 @@
+moduleName=ratpack-server-core
+moduleVersion=
+extensionClasses=ratpack.server.core.websocket.WebSockets

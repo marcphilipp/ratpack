@@ -18,8 +18,8 @@ package ratpack.site
 
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
-import ratpack.error.internal.ErrorHandler
-import ratpack.handling.Context
+import ratpack.server.core.error.internal.ErrorHandler
+import ratpack.server.core.handling.Context
 
 import static ratpack.groovy.Groovy.groovyMarkupTemplate
 

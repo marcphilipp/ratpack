@@ -29,7 +29,8 @@ import ratpack.guice.ConfigurableModule;
 import ratpack.guice.internal.GuiceUtil;
 import ratpack.handlebars.internal.FileSystemBindingTemplateLoader;
 import ratpack.handlebars.internal.HandlebarsTemplateRenderer;
-import ratpack.server.ServerConfig;
+import ratpack.server.core.ServerConfig;
+import ratpack.server.core.file.MimeTypes;
 
 /**
  * An extension module that provides support for Handlebars.java templating engine.
@@ -50,7 +51,7 @@ import ratpack.server.ServerConfig;
  * <p>
  * Response content type can be manually specified, i.e. {@code handlebarsTemplate("template", model, "text/html")} or can
  * be detected based on the template extension. Mapping between file extensions and content types is performed using
- * {@link ratpack.file.MimeTypes} contextual object so content type for {@code handlebarsTemplate("template.html")}
+ * {@link MimeTypes} contextual object so content type for {@code handlebarsTemplate("template.html")}
  * would be {@code text/html} by default.
  * </p>
  * <p>Custom handlebars helpers can be registered by binding instances of {@link ratpack.handlebars.NamedHelper}.</p>

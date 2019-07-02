@@ -28,9 +28,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.*;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import ratpack.func.Action;
-import ratpack.handling.Chain;
-import ratpack.handling.Handler;
-import ratpack.server.RatpackServer;
+import ratpack.server.core.handling.Chain;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.RatpackServer;
 import ratpack.spring.JsonTests.Application;
 import ratpack.spring.config.EnableRatpack;
 
@@ -39,8 +39,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static org.junit.Assert.*;
-import static ratpack.jackson.Jackson.fromJson;
-import static ratpack.jackson.Jackson.json;
+import static ratpack.server.core.jackson.Jackson.fromJson;
+import static ratpack.server.core.jackson.Jackson.json;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)

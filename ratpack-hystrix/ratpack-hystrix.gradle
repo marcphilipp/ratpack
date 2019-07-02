@@ -23,7 +23,7 @@ ext.apiLinks = [
 ]
 
 dependencies {
-  compile project(":ratpack-core")
+  compile project(":ratpack-server-core")
   compile project(":ratpack-guice")
   compile("com.netflix.hystrix:hystrix-core:$commonVersions.hystrix") {
     exclude group: "org.slf4j", module: "slf4j-api"

@@ -29,9 +29,9 @@ import org.springframework.context.annotation.Import;
 import ratpack.func.Function;
 import ratpack.guice.Guice;
 import ratpack.exec.registry.Registry;
-import ratpack.server.RatpackServer;
-import ratpack.server.ServerConfig;
-import ratpack.server.ServerConfigBuilder;
+import ratpack.server.core.RatpackServer;
+import ratpack.server.core.ServerConfig;
+import ratpack.server.core.ServerConfigBuilder;
 import ratpack.spring.Spring;
 import ratpack.spring.config.internal.ChainConfigurers;
 

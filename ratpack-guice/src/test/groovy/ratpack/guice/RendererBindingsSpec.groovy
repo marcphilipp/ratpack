@@ -17,11 +17,11 @@
 package ratpack.guice
 
 import com.google.inject.AbstractModule
-import ratpack.error.ServerErrorHandler
-import ratpack.error.internal.DefaultDevelopmentErrorHandler
-import ratpack.handling.Context
-import ratpack.render.NoSuchRendererException
-import ratpack.render.RendererSupport
+import ratpack.server.core.error.ServerErrorHandler
+import ratpack.server.core.error.internal.DefaultDevelopmentErrorHandler
+import ratpack.server.core.handling.Context
+import ratpack.server.core.render.NoSuchRendererException
+import ratpack.server.core.render.RendererSupport
 import ratpack.test.internal.RatpackGroovyDslSpec
 
 import java.time.Instant

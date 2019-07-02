@@ -16,8 +16,8 @@
 
 package ratpack.exec
 
-import ratpack.error.ServerErrorHandler
-import ratpack.error.internal.DefaultDevelopmentErrorHandler
+import ratpack.server.core.error.ServerErrorHandler
+import ratpack.server.core.error.internal.DefaultDevelopmentErrorHandler
 import ratpack.func.Block
 import ratpack.test.internal.RatpackGroovyDslSpec
 import ratpack.test.internal.SimpleErrorHandler

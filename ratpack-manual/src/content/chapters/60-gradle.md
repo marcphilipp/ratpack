@@ -81,12 +81,12 @@ This is the recommended way to add dependencies that are part of the core distri
 
 The `'io.ratpack.ratpack-java'` plugin adds the following implicit dependencies:
 
-* `ratpack-core` - _compile_
+* `ratpack-server-core` - _compile_
 * `ratpack-test` - _testCompile_
 
 The `'io.ratpack.ratpack-groovy'` plugin adds the following implicit dependencies:
 
-* `ratpack-groovy` - _compile_ (depends on `ratpack-core`)
+* `ratpack-groovy` - _compile_ (depends on `ratpack-server-core`)
 * `ratpack-groovy-test` - _testCompile_ (depends on `ratpack-test`)
 
 The available libraries can be [browsed via Bintray](https://bintray.com/ratpack/maven/ratpack/view/files/io/ratpack).

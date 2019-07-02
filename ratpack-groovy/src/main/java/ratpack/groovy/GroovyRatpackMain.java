@@ -16,7 +16,7 @@
 
 package ratpack.groovy;
 
-import ratpack.server.RatpackServer;
+import ratpack.server.core.RatpackServer;
 
 /**
  * A boilerplate entry point, which combines {@link RatpackServer#start(ratpack.func.Action)} and {@link Groovy.Script#app()}.

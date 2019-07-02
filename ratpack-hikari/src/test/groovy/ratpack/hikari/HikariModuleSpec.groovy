@@ -18,8 +18,8 @@ package ratpack.hikari
 
 import groovy.sql.Sql
 import ratpack.groovy.sql.SqlModule
-import ratpack.service.Service
-import ratpack.service.StartEvent
+import ratpack.server.core.service.Service
+import ratpack.server.core.service.StartEvent
 import ratpack.test.internal.RatpackGroovyDslSpec
 
 class HikariModuleSpec extends RatpackGroovyDslSpec {

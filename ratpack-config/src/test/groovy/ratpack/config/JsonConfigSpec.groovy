@@ -16,7 +16,7 @@
 
 package ratpack.config
 
-import ratpack.server.ServerConfig
+import ratpack.server.core.ServerConfig
 
 class JsonConfigSpec extends BaseConfigSpec {
   def "supports json"() {

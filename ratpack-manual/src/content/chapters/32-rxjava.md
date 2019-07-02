@@ -46,7 +46,7 @@ All observable sequences have an implicit default error handling strategy of for
 In practice, this means that error handlers rarely need to be defined for observable sequences.
 
 ```language-java
-import ratpack.error.ServerErrorHandler;
+import ratpack.server.core.error.ServerErrorHandler;
 import ratpack.rx.RxRatpack;
 import ratpack.test.handling.RequestFixture;
 import ratpack.test.handling.HandlingResult;

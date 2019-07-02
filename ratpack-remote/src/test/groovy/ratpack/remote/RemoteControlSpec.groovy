@@ -20,9 +20,9 @@ import io.remotecontrol.groovy.ContentType
 import io.remotecontrol.groovy.client.RemoteControl
 import io.remotecontrol.transport.http.HttpTransport
 import ratpack.func.util.FileSystemBinding
-import ratpack.http.client.RequestSpec
-import ratpack.http.internal.HttpHeaderConstants
-import ratpack.render.Renderer
+import ratpack.server.core.http.client.RequestSpec
+import ratpack.server.core.http.internal.HttpHeaderConstants
+import ratpack.server.core.render.Renderer
 import ratpack.test.internal.RatpackGroovyDslSpec
 
 import java.nio.file.Path

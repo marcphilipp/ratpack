@@ -30,7 +30,7 @@ One reason to provide a custom redirector implementation would be to interpret d
 ## Reading the request
 
 Several mechanisms are available for obtaining the body of a request.
-For simple use cases, [`Context.parse(Class<T>)`](api/ratpack/handling/Context.html#parse-ratpack.parse.Parse-) will buffer the entire class into memory and yield an object of the specified type.
+For simple use cases, [`Context.parse(Class<T>)`](api/ratpack/handling/Context.html#parse-Parse-) will buffer the entire class into memory and yield an object of the specified type.
 When you just need a text or byte view of the entire request, you may use the lower-level [`Request.getBody()`](api/ratpack/http/Request.html#getBody--) method.
 For advanced uses or for handling extra large requests, [`Request.getBodyStream()`] provides access to the individual byte chunks as they are recieved.
 
@@ -38,7 +38,7 @@ For advanced uses or for handling extra large requests, [`Request.getBodyStream(
 
 The parser mechanism to turn the request body into an object representation. 
 It works by selecting a [`Parser`](api/ratpack/parse/Parser.html) implementation from context registry.
-See [`Context.parse(Class<T>)`](api/ratpack/handling/Context.html#parse-ratpack.parse.Parse-) for details and additional variants. 
+See [`Context.parse(Class<T>)`](api/ratpack/handling/Context.html#parse-Parse-) for details and additional variants. 
 
 #### JSON
 
@@ -51,10 +51,10 @@ Ratpack provides a parser for [`Form`](api/ratpack/form/Form.html) objects in th
 This can be used for reading POST'd (or PUT'd etc. for that matter) forms, both URL encoded and multi part (including file uploads).
 
 ```language-java tested
-import ratpack.handling.Handler;
-import ratpack.handling.Context;
-import ratpack.form.Form;
-import ratpack.form.UploadedFile;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.handling.Context;
+import ratpack.server.core.form.Form;
+import ratpack.server.core.form.UploadedFile;
 
 public class MyHandler implements Handler {
   public void handle(Context context) {
@@ -86,7 +86,7 @@ This method will default to rejecting requests which are larger than the server'
 Additional flavors are available for configuring the [rejection action](api/ratpack/http/Request.html#getBody-ratpack.func.Block-) and the [maximum size](api/ratpack/http/Request.html#getBody-long-).
 
 ```language-java tested
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -127,11 +127,11 @@ The methods exposed to manipulating the response can be found in the [`Response`
 
 ### Setting the response status
 
-Setting the status of a response is as easy as calling [`Response#status(int)`](api/ratpack/http/Response.html#status-int-) or [`Response#status(ratpack.http.Status)`](api/ratpack/http/Response.html#status-ratpack.http.Status-).
+Setting the status of a response is as easy as calling [`Response#status(int)`](api/ratpack/http/Response.html#status-int-) or [`Response#status(Status)`](api/ratpack/http/Response.html#status-Status-).
 
 ```language-java
-import ratpack.http.Response;
-import ratpack.http.Status;
+import ratpack.server.core.http.Response;
+import ratpack.server.core.http.Status;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -157,7 +157,7 @@ The shortest way to send a response is to simply call [`Response#send()`](api/ra
 This will send a response with no response body.
 
 ```language-java
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -178,7 +178,7 @@ public class Example {
 If you want to send a plain text response you can use [`Response#send(String)`](api/ratpack/http/Response.html#send-java.lang.String-).
 
 ```language-java
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -210,7 +210,7 @@ More specifically, it's the underlying mechanism that powers the [`render(Object
 In the following example, we utilize the context's `render(Object)` method to render an object of type `String`.
 
 ```language-java
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -234,7 +234,7 @@ Ratpack provides a number of `Renderer`s out of the box, including but not limit
 If you attempt to render a type that is not registered, it will result in a server error.
 
 ```language-java
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -264,10 +264,10 @@ If you'd like to implement your own `Renderer`, Ratpack provides a [`RendererSup
 You must also remember to register your `Renderer` so that Ratpack can use it.
 
 ```language-java
-import ratpack.handling.Context;
+import ratpack.server.core.handling.Context;
 import ratpack.exec.registry.Registry;
-import ratpack.http.client.ReceivedResponse;
-import ratpack.render.RendererSupport;
+import ratpack.server.core.http.client.ReceivedResponse;
+import ratpack.server.core.render.RendererSupport;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -338,11 +338,11 @@ For example:
 
 ```language-java
 import io.netty.handler.codec.http.HttpHeaderNames;
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
-import ratpack.http.Headers;
-import ratpack.http.Request;
-import ratpack.http.Status;
+import ratpack.server.core.http.Headers;
+import ratpack.server.core.http.Request;
+import ratpack.server.core.http.Status;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -382,9 +382,9 @@ HTTP Header information is available from an incoming request as it is for an ou
 The [`Headers`](api/ratpack/http/Headers.html) interface allows you to retrieve header information associated with the incoming request.
 
 ```language-java
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
-import ratpack.http.Headers;
+import ratpack.server.core.http.Headers;
 
 import static org.junit.Assert.assertEquals;
 
@@ -413,8 +413,8 @@ public class Example {
 The [`MutableHeaders`](api/ratpack/http/MutableHeaders.html) provides functionality that enables you to manipulate response headers via the response object [`Response#getHeaders()`](api/ratpack/http/Response.html#getHeaders--).
 
 ```language-java
-import ratpack.http.MutableHeaders;
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.MutableHeaders;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -449,7 +449,7 @@ As with HTTP headers, cookies are available for inspection from an inbound reque
 To retrieve the value of a cookie, you can use [`Request#oneCookie(String)`](api/ratpack/http/Request.html#oneCookie-java.lang.String-).
 
 ```language-java
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -476,7 +476,7 @@ You can also retrieve a set of cookies via [`Request#getCookies()`](api/ratpack/
 
 ```language-java
 import io.netty.handler.codec.http.cookie.Cookie;
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import java.util.Set;
@@ -511,7 +511,7 @@ You can set cookies to be sent with the response [`Response#cookie(String, Strin
 To retrieve the set of cookies to be set with the response you may use [`Response#getCookies()`](api/ratpack/http/Response.html#getCookies--).
 
 ```language-java
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;
@@ -535,7 +535,7 @@ public class Example {
 If you want to expire a cookie, you can do so with [`Response#expireCookie()`](api/ratpack/http/Response.html#expireCookie-java.lang.String-). 
 
 ```language-java
-import ratpack.http.client.ReceivedResponse;
+import ratpack.server.core.http.client.ReceivedResponse;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertTrue;

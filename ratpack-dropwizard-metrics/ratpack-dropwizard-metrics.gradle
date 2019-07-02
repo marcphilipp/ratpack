@@ -19,7 +19,7 @@ description = "Provides integration with the Dropwizard Metrics library - https:
 apply from: "$rootDir/gradle/javaModule.gradle"
 
 dependencies {
-  compile project(":ratpack-core")
+  compile project(":ratpack-server-core")
   compile project(":ratpack-guice")
 
   compile("io.dropwizard.metrics:metrics-core:${commonVersions.dropwizardMetrics}") {

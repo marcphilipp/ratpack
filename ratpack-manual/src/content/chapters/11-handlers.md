@@ -9,8 +9,8 @@ Conceptually, a handler ([`Handler`](api/ratpack/handling/Handler.html)) is just
 The “hello world” handler looks like this…
 
 ```language-java
-import ratpack.handling.Handler;
-import ratpack.handling.Context;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.handling.Context;
 
 public class Example implements Handler {
   public void handle(Context context) {
@@ -40,8 +40,8 @@ Consider a handler that routes to one of two different handlers based on the req
 This can be implemented as…
 
 ```language-groovy tested
-import ratpack.handling.Handler;
-import ratpack.handling.Context;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.handling.Context;
 
 public class FooHandler implements Handler {
   public void handle(Context context) {
@@ -72,14 +72,14 @@ public class Router implements Handler {
 }
 ```
 
-The key to delegation is the [`context.insert()`](api/ratpack/handling/Context.html#insert-ratpack.handling.Handler...-) method that passes control to one or more linked handlers.
+The key to delegation is the [`context.insert()`](api/ratpack/handling/Context.html#insert-Handler...-) method that passes control to one or more linked handlers.
 The [`context.next()`](api/ratpack/handling/Context.html#next--) method passes control to the next linked handler.
 
 Consider the following…
 
 ```language-groovy tested
-import ratpack.handling.Handler;
-import ratpack.handling.Context;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.handling.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -125,8 +125,8 @@ The last handler is _always_ an internal handler that issues a HTTP 404 client e
 Consider that inserted handlers can themselves insert more handlers…
 
 ```language-groovy tested
-import ratpack.handling.Handler;
-import ratpack.handling.Context;
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.handling.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -198,9 +198,9 @@ The chain itself doesn't respond to a request, but instead passes a request arou
 Consider again the Foo-Bar router example…
 
 ```language-groovy tested
-import ratpack.handling.Chain
-import ratpack.handling.Handler;
-import ratpack.handling.Context;
+import ratpack.server.core.handling.Chain
+import ratpack.server.core.handling.Handler;
+import ratpack.server.core.handling.Context;
 import ratpack.func.Action;
 
 public class FooHandler implements Handler {
@@ -240,7 +240,7 @@ Instead it is a powerful tool built from the more flexible tool, the handler.
 ### Adding Handlers and Chains
 
 So the chain can most simply be thought of as a list of handlers.
-The most basic way to add a handler to the chain's list is the [`all(Handler)`](api/ratpack/handling/Chain.html#all-ratpack.handling.Handler-) method.
+The most basic way to add a handler to the chain's list is the [`all(Handler)`](api/ratpack/handling/Chain.html#all-Handler-) method.
 The word "all" represents that all requests reaching this point in the chain will flow through the given handler.
 
 If we stretch our minds a little and think of the chain as a handler (one that is just specialized in inserting handlers), then it also stands to reason that we can add additional chains to a chain.
@@ -249,9 +249,9 @@ Likewise, this inserts a chain through which all requests are routed.
 
 Now, the chain wouldn't be very useful if it just handled a list of handlers, calling each in a row, so there are also several methods than can perform conditional inserts of handlers and chains:
 
-* [`path(String,Handler)`](api/ratpack/handling/Chain.html#path-java.lang.String-ratpack.handling.Handler-), used in the previous example, is particularly useful for routing to different handlers based upon the request path.
-  It also comes in a [`path(Handler)`](api/ratpack/handling/Chain.html#path-ratpack.handling.Handler-) flavor to easily match the empty "" path.
-* [`onlyIf(Predicate<Context>, Handler)`](api/ratpack/handling/Chain.html#onlyIf-ratpack.func.Predicate-ratpack.handling.Handler-) can be used to route based upon a programmatic behavior.
+* [`path(String,Handler)`](api/ratpack/handling/Chain.html#path-java.lang.String-Handler-), used in the previous example, is particularly useful for routing to different handlers based upon the request path.
+  It also comes in a [`path(Handler)`](api/ratpack/handling/Chain.html#path-Handler-) flavor to easily match the empty "" path.
+* [`onlyIf(Predicate<Context>, Handler)`](api/ratpack/handling/Chain.html#onlyIf-ratpack.func.Predicate-Handler-) can be used to route based upon a programmatic behavior.
 * [`host(String, Action<Chain>)`](api/ratpack/handling/Chain.html#host-java.lang.String-ratpack.func.Action-) inserts another chain when a request has a specific Host header value.
 * [`when(Predicate<Context>, Action<Chain>)`](api/ratpack/handling/Chain.html#when-ratpack.func.Predicate-ratpack.func.Action-) will insert a chain when a programmatic behavior is met.
 

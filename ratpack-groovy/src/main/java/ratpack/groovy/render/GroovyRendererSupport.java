@@ -17,8 +17,9 @@
 package ratpack.groovy.render;
 
 import ratpack.groovy.handling.GroovyContext;
-import ratpack.handling.Context;
-import ratpack.render.RendererSupport;
+import ratpack.server.core.handling.Context;
+import ratpack.server.core.render.Renderer;
+import ratpack.server.core.render.RendererSupport;
 
 /**
  * A specialisation of {@link RendererSupport} that makes a {@link GroovyContext} available.
@@ -42,7 +43,7 @@ public abstract class GroovyRendererSupport<T> extends RendererSupport<T> {
   /**
    * Renders the given object to the context.
    *
-   * @see ratpack.render.Renderer#render(ratpack.handling.Context, Object)
+   * @see Renderer#render(Context, Object)
    * @param context The context to render to
    * @param object The object to render
    * @throws Exception If the object cannot be rendered for any reason

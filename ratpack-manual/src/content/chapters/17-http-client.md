@@ -9,7 +9,7 @@ Just like the Ratpack server, the `HttpClient` also uses Netty under the hood an
 
 
 ```language-java
-import ratpack.http.client.HttpClient;
+import ratpack.server.core.http.client.HttpClient;
 import ratpack.test.embed.EmbeddedApp;
 
 import static org.junit.Assert.assertEquals;

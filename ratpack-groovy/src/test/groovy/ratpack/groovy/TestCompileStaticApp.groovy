@@ -17,8 +17,8 @@
 package ratpack.groovy
 
 import groovy.transform.CompileStatic
-import ratpack.server.RatpackServer
-import ratpack.server.ServerConfig
+import ratpack.server.core.RatpackServer
+import ratpack.server.core.ServerConfig
 
 @CompileStatic
 class TestCompileStaticApp {
