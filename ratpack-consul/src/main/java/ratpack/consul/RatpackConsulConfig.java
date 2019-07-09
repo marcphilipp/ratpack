@@ -24,7 +24,7 @@ import ratpack.func.util.Exceptions;
 import ratpack.server.core.ServerConfigBuilder;
 
 /**
- * Integration for retrieving values from a <a href=https://www.consul.io/>Consul</a> Key-Value store as {@link com.google.common.io.ByteSource} to be used
+ * Integration for retrieving values from a <a href="https://www.consul.io/">Consul</a> Key-Value store as {@link com.google.common.io.ByteSource} to be used
  * with the existing {@link ServerConfigBuilder} parsing options.
  * @since 1.5
  */
